@@ -125,8 +125,8 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Properties', path: '/properties' },
-    { name: 'Sustainability', path: '/sustainability' },
+    { name: 'Properties', path: '/Properties' },
+    { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }
   ]
@@ -142,7 +142,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className={`w-5 h-5 ${scrolled ? 'bg-amber-500' : 'bg-emerald-200'} rounded-sm transition-all duration-300 group-hover:rotate-12 group-hover:bg-emerald-400`} />
             <span className={`text-lg font-medium tracking-wider ${scrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300 group-hover:text-emerald-400`}>
-              VERDURA
+              Anandam Farm
             </span>
           </Link>
           <div className={`h-6 w-px ${scrolled ? 'bg-gray-200' : 'bg-emerald-200/40'} transition-colors duration-300`} />
