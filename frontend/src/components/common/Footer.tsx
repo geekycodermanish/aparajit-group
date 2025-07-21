@@ -8,14 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1 - Branding */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-amber-400 rounded-full flex items-center justify-center">
-                <span className="text-emerald-900 font-serif italic font-bold">A</span>
-              </div>
-              <span className="text-2xl font-serif font-light tracking-wide text-emerald-50">ANANDAM FARM</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-medium tracking-wide text-emerald-50">APARAJIT GROUP</span>
+              <div className="h-px w-12 my-2 bg-amber-400"></div>
+              <span className="text-sm italic text-amber-300">- anandam farms -</span>
             </div>
-            <p className="text-emerald-200 leading-relaxed font-sans">
-              Specializing in premium sustainable properties that harmonize with nature since 2010.
+            <p className="text-emerald-200 leading-relaxed">
+              Premium agricultural properties that combine productivity with luxury living since 2010.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-emerald-200 hover:text-amber-400 transition-colors">
@@ -41,26 +40,26 @@ export default function Footer() {
 
           {/* Column 2 - Navigation */}
           <div>
-            <h3 className="text-lg font-serif font-light tracking-wider uppercase mb-6 text-emerald-50">Navigation</h3>
+            <h3 className="text-lg font-medium tracking-wider uppercase mb-6 text-emerald-50">Explore</h3>
             <ul className="space-y-3">
-              <li><Link href="/properties" className="text-emerald-200 hover:text-amber-400 transition-colors font-sans">Green Properties</Link></li>
-              <li><Link href="/developments" className="text-emerald-200 hover:text-amber-400 transition-colors font-sans">Eco-Developments</Link></li>
-              <li><Link href="/consultation" className="text-emerald-200 hover:text-amber-400 transition-colors font-sans">Sustainability Consultation</Link></li>
-              <li><Link href="/about" className="text-emerald-200 hover:text-amber-400 transition-colors font-sans">Our Mission</Link></li>
-              <li><Link href="/contact" className="text-emerald-200 hover:text-amber-400 transition-colors font-sans">Contact Advisors</Link></li>
+              <li><Link href="/properties" className="text-emerald-200 hover:text-amber-400 transition-colors">Farmland Properties</Link></li>
+              <li><Link href="/developments" className="text-emerald-200 hover:text-amber-400 transition-colors">Agricultural Estates</Link></li>
+              <li><Link href="/consultation" className="text-emerald-200 hover:text-amber-400 transition-colors">Land Investment</Link></li>
+              <li><Link href="/about" className="text-emerald-200 hover:text-amber-400 transition-colors">Our Heritage</Link></li>
+              <li><Link href="/contact" className="text-emerald-200 hover:text-amber-400 transition-colors">Contact Advisors</Link></li>
             </ul>
           </div>
 
           {/* Column 3 - Contact */}
           <div>
-            <h3 className="text-lg font-serif font-light tracking-wider uppercase mb-6 text-emerald-50">Contact</h3>
-            <address className="not-italic space-y-3 font-sans">
+            <h3 className="text-lg font-medium tracking-wider uppercase mb-6 text-emerald-50">Contact</h3>
+            <address className="not-italic space-y-3">
               <div className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-emerald-200">Unit 1602, DLF Corporate Greens, Gurugram 122004</span>
+                <span className="text-emerald-200">Farm Office: Sector 45, Gurugram 122004</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,27 +71,27 @@ export default function Footer() {
                 <svg className="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:info@verduraestates.com" className="text-emerald-200 hover:text-amber-400 transition-colors">info@verduraestates.com</a>
+                <a href="mailto:info@anandamfarms.com" className="text-emerald-200 hover:text-amber-400 transition-colors">info@anandamfarms.com</a>
               </div>
             </address>
           </div>
 
           {/* Column 4 - Newsletter */}
           <div>
-            <h3 className="text-lg font-serif font-light tracking-wider uppercase mb-6 text-emerald-50">Green Insights</h3>
-            <p className="text-emerald-200 mb-6 font-sans leading-relaxed">
-              Subscribe for sustainable living tips and exclusive eco-property listings.
+            <h3 className="text-lg font-medium tracking-wider uppercase mb-6 text-emerald-50">Farm Updates</h3>
+            <p className="text-emerald-200 mb-6 leading-relaxed">
+              Subscribe for agricultural insights and exclusive farmland listings.
             </p>
             <form className="space-y-4">
               <input 
                 type="email" 
                 placeholder="Your email address" 
-                className="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 text-white placeholder-emerald-300 focus:border-amber-400 focus:outline-none transition"
+                className="w-full px-4 py-3 bg-emerald-800/50 border border-emerald-700 text-white placeholder-emerald-300 focus:border-amber-400 focus:outline-none rounded-lg transition"
                 required
               />
               <button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-emerald-900 font-medium py-3 px-6 transition-colors uppercase tracking-wider text-sm"
+                className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-emerald-900 font-medium py-3 px-6 rounded-lg transition-colors uppercase tracking-wider text-sm"
               >
                 Subscribe
               </button>
@@ -102,18 +101,18 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-emerald-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-emerald-400 text-sm font-sans">
-            &copy; {new Date().getFullYear()} Verdura Estates. All rights reserved.
+          <p className="text-emerald-400 text-sm">
+            &copy; {new Date().getFullYear()} Anandam Farms, APARAJIT GROUP. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-emerald-400 hover:text-amber-400 transition-colors text-sm font-sans">
+            <Link href="/privacy" className="text-emerald-400 hover:text-amber-400 transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-emerald-400 hover:text-amber-400 transition-colors text-sm font-sans">
+            <Link href="/terms" className="text-emerald-400 hover:text-amber-400 transition-colors text-sm">
               Terms of Service
             </Link>
-            <Link href="/sustainability" className="text-emerald-400 hover:text-amber-400 transition-colors text-sm font-sans">
-              Sustainability Pledge
+            <Link href="/sustainability" className="text-emerald-400 hover:text-amber-400 transition-colors text-sm">
+              Our Commitment
             </Link>
           </div>
         </div>

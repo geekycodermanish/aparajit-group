@@ -125,7 +125,7 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Properties', path: '/Properties' },
+    { name: 'Properties', path: '/properties' },
     { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }
@@ -137,18 +137,18 @@ export default function Header() {
         ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}
     >
       <div className="flex justify-between items-center w-full">
-        {/* Logo + Divider - Updated with green/gold theme */}
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className={`w-5 h-5 ${scrolled ? 'bg-amber-500' : 'bg-emerald-200'} rounded-sm transition-all duration-300 group-hover:rotate-12 group-hover:bg-emerald-400`} />
-            <span className={`text-lg font-medium tracking-wider ${scrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300 group-hover:text-emerald-400`}>
-              Anandam Farm
-            </span>
-          </Link>
-          <div className={`h-6 w-px ${scrolled ? 'bg-gray-200' : 'bg-emerald-200/40'} transition-colors duration-300`} />
-        </div>
+        {/* Logo - Updated with your requested design */}
+        <Link href="/" className="flex flex-col group">
+          <div className={`flex items-end gap-1 transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+            <span className="text-lg font-medium tracking-wider">APARAJIT GROUP</span>
+            <div className={`h-px w-8 mb-1 ${scrolled ? 'bg-gray-400' : 'bg-emerald-200'} transition-colors duration-300`}></div>
+          </div>
+          <div className={`text-xs tracking-widest transition-colors duration-300 ${scrolled ? 'text-emerald-600' : 'text-amber-300'} group-hover:text-amber-400`}>
+            - anandam farms -
+          </div>
+        </Link>
 
-        {/* Desktop Navigation - Updated */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
             <div key={item.name} className="relative group">
@@ -165,7 +165,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Right: Call & Button - Updated */}
+        {/* Right: Call & Button */}
         <div className="hidden md:flex items-center gap-6">
           <button className={`relative overflow-hidden group px-6 py-2 rounded-full text-sm font-medium tracking-wider transition-all duration-300 ${
             scrolled 
@@ -179,7 +179,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Toggle - Updated */}
+        {/* Mobile Toggle */}
         <button
           className="md:hidden p-2 focus:outline-none group"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -206,7 +206,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Nav - Updated */}
+      {/* Mobile Nav */}
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${
           mobileMenuOpen ? 'max-h-screen py-4' : 'max-h-0 py-0'
