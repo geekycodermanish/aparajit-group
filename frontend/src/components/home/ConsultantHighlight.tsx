@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 
 export default function PremiumFarmLandSection() {
   return (
@@ -20,7 +21,7 @@ export default function PremiumFarmLandSection() {
           </h2>
           
           <p className="text-emerald-700/90 text-lg mb-8 leading-relaxed">
-            Discover exceptional agricultural land parcels for discerning buyers seeking premium investments in Delhi's most desirable locations.
+            Discover exceptional agricultural land parcels for discerning buyers seeking premium investments in Delhi most desirable locations.
           </p>
           
           <div className="space-y-6 mb-10">
@@ -33,7 +34,7 @@ export default function PremiumFarmLandSection() {
                 </div>
               </div>
               <p className="text-emerald-800">
-                <span className="font-medium">Prime Locations</span> in South Delhi's most sought-after agricultural belts
+                <span className="font-medium">Prime Locations</span> in South Delhi most sought-after agricultural belts
               </p>
             </div>
             
@@ -79,9 +80,11 @@ export default function PremiumFarmLandSection() {
 
         {/* Right Side - Premium Image Display */}
         <div className="relative h-[500px] rounded-2xl overflow-hidden group order-2 lg:order-none">
-          <img
-            src="/images/pic_5.jpg" // Use high-quality farm land image
+          <Image
+            src="/images/pic_5.jpg"
             alt="Premium Farm Land in South Delhi"
+            width={1200} // Use the actual width of your image if known
+            height={800} // Use the actual height
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-emerald-900/60" />

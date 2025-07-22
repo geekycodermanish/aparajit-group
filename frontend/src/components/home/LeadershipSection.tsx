@@ -17,13 +17,13 @@ export default function LeadershipSection() {
             <span className="text-amber-500 font-medium tracking-widest text-sm">OUR PHILOSOPHY</span>
           </div>
           
-          <blockquote className="text-3xl md:text-4xl font-light text-emerald-900 mb-8 leading-tight italic">
-            "The function of leadership is to produce more leaders, not more followers."
-          </blockquote>
+            <blockquote className="text-3xl md:text-4xl font-light text-emerald-900 mb-8 leading-tight italic">
+            &quot;The function of leadership is to produce more leaders, not more followers.&quot;
+            </blockquote>
           
           <div className="prose prose-emerald max-w-2xl">
             <p className="text-lg text-emerald-700 mb-6">
-              At BNW, our mission is clear: bridge the gap between investors and the most lucrative opportunities in the real estate landscape. We're dedicated to maximizing returns on investment (ROI) by providing tailored guidance and in-depth market insights.
+              At BNW, our mission is clear: bridge the gap between investors and the most lucrative opportunities in the real estate landscape. We are dedicated to maximizing returns on investment (ROI) by providing tailored guidance and in-depth market insights.
             </p>
             <p className="text-lg text-emerald-700">
               With our personalized approach, we empower clients to navigate the dynamic real estate market effectively, ensuring they capitalize on the best investments available.

@@ -43,8 +43,8 @@ export default function AboutSection() {
           </h2>
           
           <p className="text-lg text-emerald-100 mb-8 leading-relaxed">
-            From our humble beginnings as farmland stewards to becoming Delhi's premier luxury agricultural land specialists, 
-            we've remained committed to connecting discerning buyers with exceptional properties that appreciate in value.
+            From our humble beginnings as farmland stewards to becoming Delhi premier luxury agricultural land specialists, 
+            we have remained committed to connecting discerning buyers with exceptional properties that appreciate in value.
           </p>
           
           <div className="space-y-6 mb-10">
