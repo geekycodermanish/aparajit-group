@@ -1,68 +1,64 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useRef } from 'react'
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  
-  const heroImages = [
-    '/images/pexels-damir-33059225.jpg',
-    '/images/pic_1.jpg',
-    '/images/pic_2.jpg',
-    '/images/pic_3.jpg'
-  ]
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev === heroImages.length - 1 ? 0 : prev + 1))
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+  const videoRef = useRef(null)
 
   return (
-    <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20">
-      {/* Sliding Image Background with reduced tint */}
-      <div className="absolute inset-0 z-0">
-        {heroImages.map((image, index) => (
-          <div 
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-          >
-            <img
-              src={image}
-              alt={`Luxury green property ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-            {/* Reduced green tint opacity from 30% to 15% */}
-            <div className="absolute inset-0 bg-emerald-900/15" />
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Single Video Background */}
+      <div className="absolute inset-0">
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover"
+          muted
+          loop
+          autoPlay
+          playsInline
+        >
+          <source src="/images/banner_vider_1.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center text-white">
+            [Luxury Property Video]
           </div>
-        ))}
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </div>
 
-      {/* Bottom-Centered Content (identical to original) */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-tight leading-tight mb-2">
-          <span className="font-serif italic text-emerald-100">Find</span> Your
-        </h1>
-        <h2 className="text-4xl sm:text-6xl md:text-6xl font-bold text-amber-300 tracking-tight leading-tight mb-6">
-          Green Sanctuary
-        </h2>
-
-        <div className="w-20 h-1 bg-amber-400 mx-auto mb-6" />
-
-        <p className="text-base sm:text-lg md:text-xl text-emerald-50 leading-relaxed font-light max-w-2xl mx-auto">
-          We specialize in premium sustainable properties that harmonize with nature. 
-          Discover eco-luxury homes that nurture both family and environment.
-        </p>
-
-        {/* Decorative elements (position unchanged) */}
-        <div className="absolute -top-20 -left-20 w-40 h-40 border-4 border-amber-400/30 rounded-full opacity-50" />
-        <div className="absolute -bottom-10 -right-20 w-32 h-32 border-4 border-emerald-400/30 rounded-full opacity-50" />
+      {/* Content positioned bottom left */}
+      <div className="relative z-10 h-full flex flex-col justify-end pb-16 pl-12 text-white">
+        <div className="max-w-2xl space-y-4">
+          <h1 className="text-5xl sm:text-6xl font-serif font-light tracking-tight leading-tight">
+            Legacy that Leads
+          </h1>
+          <div className="h-px w-20 bg-amber-400 my-4" />
+          <h2 className="text-xl sm:text-2xl font-light tracking-widest uppercase">
+            Innovation that Lasts
+          </h2>
+        </div>
       </div>
 
-      {/* Leaf-like decorative elements (position unchanged) */}
-      <div className="absolute top-1/4 left-10 w-16 h-16 bg-emerald-600/20 rounded-full blur-md" />
-      <div className="absolute bottom-1/3 right-20 w-24 h-24 bg-amber-400/10 rounded-full blur-md" />
+      {/* Play/Pause Control - Bottom right */}
+      <button 
+        className="absolute bottom-8 right-8 z-10 p-2 text-white hover:text-amber-400 transition-colors"
+        onClick={() => {
+          if (videoRef.current?.paused) {
+            videoRef.current.play()
+          } else {
+            videoRef.current?.pause()
+          }
+        }}
+        aria-label="Toggle play/pause"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {videoRef.current?.paused ? (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          )}
+        </svg>
+      </button>
     </section>
   )
 }

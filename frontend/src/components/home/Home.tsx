@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <main className="bg-black text-white">
       <HeroSection />
-      <ConsultantHighlight />
+      {/* <ConsultantHighlight />
       <FarmlandVerticalSlider />
       <VisionPage />
       <AboutSection />
-      <LeadershipSection />
+      <LeadershipSection /> */}
 
     </main>
   );
