@@ -52,19 +52,19 @@ export default function Header() {
       <div className="max-w-8xl mx-auto px-6">
         <div className="flex justify-between items-center py-3">
           {/* LOGO - Smaller and more prominent */}
-          <Link href="/" className="flex items-center h-10 w-auto">
+          <Link href="/" className="flex items-center h-10 w-auto ml-[5%]">
             <Image
               src="/images/LOGO.png"
               alt="Aparajit Group"
-              width={80}  // Reduced from 160
-              height={30}  // Reduced from 48
+              width={80}
+              height={30}
               className={`transition-all duration-300 ${scrolled ? 'opacity-100' : 'opacity-90 hover:opacity-100'}`}
               priority
             />
           </Link>
 
           {/* DESKTOP NAV - Stronger typography */}
-          <nav className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
+          <nav className="hidden md:flex items-center absolute left-2/3 transform -translate-x-1/2">
             <div className="flex space-x-6">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
