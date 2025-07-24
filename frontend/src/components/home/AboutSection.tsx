@@ -31,9 +31,8 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
-              From the historic BPTP bridge over the Agra Canal to the streets of Greater
-              Faridabad and the vast townships in Gurugram, our journey has been one of
-              transformation—turning untapped landscapes into bustling, thriving communities.
+              From the Unimark Healthcare LTD. in Dwarka to The Synokrm Pharmaceutical LTD. Haridwar
+              our journey has been one of transformation—turning untapped landscapes into bustling, thriving communities.
             </p>
             
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
