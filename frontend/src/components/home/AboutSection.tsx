@@ -1,102 +1,69 @@
 'use client'
 
-import Image from 'next/image'
+import React from 'react'
+import { motion } from 'framer-motion'
 
-export default function AboutSection() {
+const AboutSection = () => {
   return (
-    <section className="relative py-28 bg-emerald-900 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-60 h-60 bg-amber-100/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-emerald-700/20 rounded-full blur-3xl" />
-      
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left Side - Image with badge */}
-        <div className="relative h-[500px] rounded-2xl overflow-hidden group">
-          <Image
-            src="/images/pic_5.jpg" // High-quality farmland image
-            alt="Our Farmland Legacy"
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            quality={100}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent" />
-          
-          {/* Experience badge */}
-          <div className="absolute -bottom-6 -left-6 bg-amber-400 text-emerald-900 p-6 rounded-2xl shadow-xl z-10">
-            <div className="text-center">
-              <span className="block text-4xl font-bold">40+</span>
-              <span className="block text-sm font-medium tracking-widest">YEARS</span>
-              <span className="block text-xs mt-1">EXPERIENCE</span>
-            </div>
-          </div>
+    <section className="bg-white text-black px-4 md:px-20 pt-24 md:pt-32">
+      <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 md:gap-20">
+        {/* Left Side - Headline */}
+        <div className="w-full lg:w-1/2">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-[2.8rem] leading-[1.1] md:text-[3.5rem] lg:text-[4rem] font-black tracking-[-0.03em]"
+          >
+            <span className="block">Reimagining Real</span>
+            <span className="block">Estate, One</span>
+            <span className="block">Community at</span>
+            <span className="block">a Time</span>
+          </motion.h2>
         </div>
 
         {/* Right Side - Content */}
-        <div className="text-emerald-50">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-amber-400" />
-            <span className="text-amber-300 font-medium tracking-widest text-sm">OUR STORY</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-            <span className="font-serif italic text-emerald-200">Cultivating</span> Land <br />Legacies Since 1980
-          </h2>
-          
-          <p className="text-lg text-emerald-100 mb-8 leading-relaxed">
-            From our humble beginnings as farmland stewards to becoming Delhi premier luxury agricultural land specialists, 
-            we have remained committed to connecting discerning buyers with exceptional properties that appreciate in value.
-          </p>
-          
-          <div className="space-y-6 mb-10">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 mt-1">
-                <div className="w-5 h-5 bg-amber-400 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-emerald-900" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-xl font-medium text-amber-300 mb-2">Agricultural Expertise</h4>
-                <p className="text-emerald-100">
-                  Deep understanding of soil quality, water resources, and cultivation potential for premium farmland.
-                </p>
-              </div>
-            </div>
+        <div className="w-full lg:w-1/2 space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
+          >
+            <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
+              From the historic BPTP bridge over the Agra Canal to the streets of Greater
+              Faridabad and the vast townships in Gurugram, our journey has been one of
+              transformation—turning untapped landscapes into bustling, thriving communities.
+            </p>
             
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 mt-1">
-                <div className="w-5 h-5 bg-amber-400 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-emerald-900" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-xl font-medium text-amber-300 mb-2">Luxury Standards</h4>
-                <p className="text-emerald-100">
-                  Curating only land parcels with premium infrastructure, access, and development potential.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex flex-wrap gap-6">
-            <div className="bg-emerald-800/50 rounded-lg p-6 text-center min-w-[150px]">
-              <span className="block text-3xl font-light text-amber-400 mb-1">500+</span>
-              <span className="text-sm text-emerald-200">Acres Transacted</span>
-            </div>
-            <div className="bg-emerald-800/50 rounded-lg p-6 text-center min-w-[150px]">
-              <span className="block text-3xl font-light text-amber-400 mb-1">100%</span>
-              <span className="text-sm text-emerald-200">Verified Titles</span>
-            </div>
-            <div className="bg-emerald-800/50 rounded-lg p-6 text-center min-w-[150px]">
-              <span className="block text-3xl font-light text-amber-400 mb-1">3 Gen</span>
-              <span className="text-sm text-emerald-200">Family Legacy</span>
-            </div>
-          </div>
+            <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
+              Over <span className="font-medium">24,500 units</span> delivered,{' '}
+              <span className="font-medium">50 million square feet</span> crafted, but our proudest
+              achievement?
+            </p>
+            
+            <p className="text-xl md:text-2xl lg:text-[1.7rem] leading-tight tracking-tight font-medium italic">
+              Building places that feel like home.
+            </p>
+          </motion.div>
+
+          {/* Know More Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <button className="mt-8 flex items-center gap-3 group">
+              <span className="text-lg font-medium tracking-tight border-b-2 border-black pb-1 transition-all group-hover:border-transparent">
+                Know More
+              </span>
+              <span className="w-4 h-4 bg-black rounded-full block transition-transform group-hover:translate-x-1" />
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>
   )
 }
+
+export default AboutSection
