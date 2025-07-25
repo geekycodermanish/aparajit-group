@@ -7,20 +7,20 @@ import { useRef } from 'react'
 
 const projects = [
   {
-    id: 'serenity-gardens',
-    title: 'Serenity Gardens',
-    location: 'Sector 102, Gurugram',
-    description: 'An exquisite collection of residences nestled in lush greenery, offering an unparalleled standard of living.',
+    id: 'Vedant City ',
+    title: 'Vedant City',
+    location: 'Jhajjar,Haryana',
+    description: 'A real estate projects by Aparajit reality ,Offering both residential and industrial plots near Relience MET City',
     image: '/images/projects/project_1.jpg',
-    features: ['Private Gardens', 'Infinity Pools', 'Smart Home']
+    features: ['RCC roads', 'Sewage treatment', 'Solar lights']
   },
   {
-    id: 'the-pinnacle',
-    title: 'The Pinnacle',
-    location: 'Sector 65, Gurugram',
-    description: 'A monumental icon of commercial architecture, standing as a testament to modern design.',
+    id: 'Synokem Pharmaceuticals Ltd.',
+    title: 'Synokem Pharmaceuticals Ltd.',
+    location: 'Haridwar, Uttrakhand',
+    description: 'A pharmaceutical manufacturer located in Haridwar, specifically in the SIDCUL Industrial Estate area.',
     image: '/images/projects/project_2.jpg',
-    features: ['LEED Certified', 'Panoramic Views', 'Sky Lounge']
+    features: ['Modern Infrastructure', 'supporting scalability', 'Coast efficiency']
   },
   {
     id: 'oasis-villas',
