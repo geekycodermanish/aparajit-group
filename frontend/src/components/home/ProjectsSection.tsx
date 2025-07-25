@@ -11,7 +11,7 @@ const projects = [
     title: 'Vedant City',
     location: 'Jhajjar,Haryana',
     description: 'A real estate projects by Aparajit reality ,Offering both residential and industrial plots near Relience MET City',
-    image: '/images/projects/project_1.jpg',
+    image: '/images/projects/project_3.jpg',
     features: ['RCC roads', 'Sewage treatment', 'Solar lights']
   },
   {
