@@ -5,7 +5,7 @@ import FarmlandVerticalSlider from "./FarmlandVerticalSlider";
 import HeroSection from "./HeroSection";
 import OurValues from "./OurValues";
 import AboutSection from "./AboutSection";
-import LeadershipSection from "./LeadershipSection";
+import DirectorSection from "./DirectorSection";
 
 
 export default function Home() {
@@ -15,9 +15,8 @@ export default function Home() {
       {/* <FarmlandVerticalSlider /> */}
       <AboutSection />
       <OurValues />
-      {/* <ProjectsSection /> */}
-      {/* <LeadershipSection /> */}
-
+      <ProjectsSection />
+      <DirectorSection />
     </main>
   );
 }

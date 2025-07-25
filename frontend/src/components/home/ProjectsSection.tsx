@@ -1,124 +1,126 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 const projects = [
   {
     id: 'serenity-gardens',
     title: 'Serenity Gardens',
     location: 'Sector 102, Gurugram',
-    description: 'An exquisite collection of residences nestled in lush greenery, offering an unparalleled standard of living and tranquility.',
+    description: 'An exquisite collection of residences nestled in lush greenery, offering an unparalleled standard of living.',
     image: '/images/projects/project_1.jpg',
+    features: ['Private Gardens', 'Infinity Pools', 'Smart Home']
   },
   {
     id: 'the-pinnacle',
     title: 'The Pinnacle',
     location: 'Sector 65, Gurugram',
-    description: 'A monumental icon of commercial architecture, standing as a testament to corporate ambition and modern design.',
+    description: 'A monumental icon of commercial architecture, standing as a testament to modern design.',
     image: '/images/projects/project_2.jpg',
+    features: ['LEED Certified', 'Panoramic Views', 'Sky Lounge']
   },
   {
     id: 'oasis-villas',
     title: 'Oasis Villas',
     location: 'Sohna Road, Gurugram',
-    description: 'Discover a private sanctuary of exclusive villas, where luxury is in every detail and privacy is paramount.',
-    image: '/images/projects/project_1.jpg',
+    description: 'Discover a private sanctuary of exclusive villas, where luxury is in every detail.',
+    image: '/images/pic_4.jpg',
+    features: ['Beach Access', 'Home Spa', '24/7 Concierge']
   },
 ]
 
-const contentVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-}
+export default function HorizontalProjectSlider() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end end']
+  })
 
-export default function LuxuryProjectShowcase() {
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-70%'])
+
   return (
-    <div className="bg-black h-screen w-full overflow-y-scroll snap-y snap-mandatory">
-      {projects.map((project, index) => (
-        <section
-          key={project.id}
-          className="snap-start relative h-screen w-full flex items-end overflow-hidden"
-        >
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover"
-              quality={100}
-              priority={index === 0}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          </div>
+    <div className="bg-white">
+      {/* Header */}
+<div className="sticky top-0 z-10 bg-white pt-20 pb-10 px-6 md:px-12">
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="max-w-4xl mx-auto"
+  >
+    <div className="relative text-center">
+      <span className="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-800 font-serif text-xl md:text-2xl tracking-widest uppercase">
+        — Our Projects —
+      </span>
+      <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-px bg-gray-200 -z-10" />
+    </div>
+  </motion.div>
+</div>
 
-          {/* Content Container */}
-          <div className="relative z-10 px-6 pb-16 md:px-12 md:pb-20 lg:px-20 text-white w-full max-w-7xl mx-auto">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.6 }}
-              className="space-y-4"
-            >
-              <motion.p
-                custom={0}
-                variants={contentVariants}
-                className="text-lg font-medium text-amber-400"
+      {/* Horizontal Slider */}
+      <div ref={containerRef} className="relative h-[300vh]">
+        <div className="sticky top-0 h-screen overflow-hidden">
+          <motion.div 
+            style={{ x }}
+            className="absolute top-0 left-0 h-full flex items-center will-change-transform"
+          >
+            {projects.map((project, index) => (
+              <div 
+                key={project.id} 
+                className="relative h-[80vh] w-[90vw] md:w-[70vw] flex-shrink-0 mx-4 md:mx-8 rounded-2xl overflow-hidden group"
               >
-                {project.location}
-              </motion.p>
+                <Link href={`/projects/${project.id}`} className="absolute inset-0 z-20" aria-label={`View ${project.title}`} />
+                
+                {/* Project Image */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    quality={100}
+                    priority={index === 0}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                </div>
 
-              <motion.h2
-                custom={1}
-                variants={contentVariants}
-                className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
-              >
-                {project.title}
-              </motion.h2>
+                {/* Project Info */}
+                <div className="absolute bottom-0 left-0 z-10 p-8 md:p-12 w-full">
+                  <div className="max-w-md">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+                      className="space-y-4"
+                    >
+                      <p className="text-amber-400 font-medium">{project.location}</p>
+                      <h3 className="text-3xl md:text-4xl font-bold text-white">{project.title}</h3>
+                      <p className="text-gray-300">{project.description}</p>
+                      
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        {project.features.map((feature, i) => (
+                          <span key={i} className="bg-white/10 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs">
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
 
-              <motion.p
-                custom={2}
-                variants={contentVariants}
-                className="text-base md:text-lg text-gray-300 max-w-xl font-light"
-              >
-                {project.description}
-              </motion.p>
+                {/* Project Number */}
+                <div className="absolute top-8 right-8 z-10 text-white/20 text-7xl font-bold">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
 
-              <motion.div custom={3} variants={contentVariants}>
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="group inline-flex items-center gap-3 mt-6 px-6 py-3 border border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300"
-                >
-                  View Property
-                  <svg
-                    className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      ))}
     </div>
   )
 }
