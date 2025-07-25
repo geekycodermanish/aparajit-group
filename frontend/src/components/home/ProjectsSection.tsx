@@ -15,12 +15,12 @@ const projects = [
     features: ['RCC roads', 'Sewage treatment', 'Solar lights']
   },
   {
-    id: 'Synokem Pharmaceuticals Ltd.',
-    title: 'Synokem Pharmaceuticals Ltd.',
-    location: 'Haridwar, Uttrakhand',
-    description: 'A pharmaceutical manufacturer located in Haridwar, specifically in the SIDCUL Industrial Estate area.',
+    id: 'ROB (Road over bridge).',
+    title: 'ROB (Road over bridge).',
+    location: 'Bankhadi , himachal pradesh',
+    description: 'A road over bridge project located in Bankhadi, Himachal Pradesh.',
     image: '/images/projects/project_2.jpg',
-    features: ['Modern Infrastructure', 'supporting scalability', 'Coast efficiency']
+    features: ['Modern Infrastructure', 'Deck slab', 'Load consideration']
   },
   {
     id: 'oasis-villas',
