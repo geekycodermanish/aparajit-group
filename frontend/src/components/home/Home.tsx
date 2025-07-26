@@ -7,6 +7,7 @@ import OurValues from "./OurValues";
 import AboutSection from "./AboutSection";
 import DirectorSection from "./DirectorSection";
 import TeamSection from "./Our_Team";
+import FeaturedProjectsSection from "./FeaturedProjectsSection";
 
 
 export default function Home() {
@@ -18,7 +19,6 @@ export default function Home() {
       <OurValues />
       <ProjectsSection />
       <DirectorSection />
-      <TeamSection />
     </main>
   );
 }
