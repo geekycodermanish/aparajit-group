@@ -8,7 +8,7 @@ import AboutSection from "./AboutSection";
 import DirectorSection from "./DirectorSection";
 import FeaturedProjectsSection from "./FeaturedProjectsSection";
 import {OurTeamSection} from "./OurTeamSection";
-import FromSection from "../../app/contact/FromSection";
+import ContactSection from "../../app/contact/ContactSection";
 
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
       <FeaturedProjectsSection />
       <DirectorSection />
       <OurTeamSection />
-      <FromSection />
+      <ContactSection />
 
     </main>
   );
