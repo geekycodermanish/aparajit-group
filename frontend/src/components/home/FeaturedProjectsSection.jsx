@@ -6,7 +6,7 @@ import { useState } from 'react';
 // New farmhouse project data
 const projects = [
   {
-    id: 1,
+    id: 1, 
     name: 'The Aananda Frame',
     video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
