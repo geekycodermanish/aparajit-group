@@ -6,6 +6,7 @@ import HeroSection from "./HeroSection";
 import OurValues from "./OurValues";
 import AboutSection from "./AboutSection";
 import DirectorSection from "./DirectorSection";
+import TeamSection from "./Our_Team";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <OurValues />
       <ProjectsSection />
       <DirectorSection />
+      <TeamSection />
     </main>
   );
 }
