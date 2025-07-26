@@ -60,16 +60,20 @@ const OurValues = () => {
                 animate="animate"
               >
                 {[...stats, ...stats].map((stat, index) => (
-                  <div key={`stat-${index}`} className="mx-8 md:mx-12 flex-shrink-0">
-                    <div className="stat-item flex flex-col items-start">
-                      <span className="text-5xl md:text-6xl font-bold text-gray-800">{stat.value}</span>
-                      <span className="text-sm md:text-base text-gray-600 uppercase tracking-wider mt-2">
-                        {stat.label}
-                      </span>
-                    </div>
+                  <div
+                    key={`stat-${index}`}
+                    className="mx-12 flex-shrink-0 flex flex-col items-start justify-center border-r border-gray-300 pr-12 last:border-none"
+                  >
+                    <span className="text-[42px] md:text-[56px] font-semibold text-black leading-tight">
+                      {stat.value}
+                    </span>
+                    <span className="text-[11px] md:text-sm text-gray-700 tracking-wide uppercase mt-2">
+                      ▪︎ {stat.label}
+                    </span>
                   </div>
                 ))}
               </motion.div>
+
             </div>
 
             {/* Second Image */}
