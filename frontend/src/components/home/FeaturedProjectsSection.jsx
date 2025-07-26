@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     name: 'The Aananda Frame',
-    video: 'https://www.shutterstock.com/shutterstock/videos/1067241709/preview/stock-footage-house-in-the-forest-fragment.webm', // Replace with your actual video path
+    video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
       'Nestled against the majestic Aravalli Hills, The Aananda Frame is a sanctuary of rustic luxury. Each estate features a private fruit orchard, sustainable architecture, and modern amenities, offering a bespoke living experience where nature and sophistication coexist.',
   },
