@@ -68,7 +68,7 @@ export default function LeadershipSection() {
       {/* Accent line at the top */}
       <div className="absolute top-0 left-0 w-full h-0.5 bg-amber-600" />
       
-      <div className="container mx-auto px-6 py-20 lg:py-32">
+      <div className="container mx-auto px-6 py-20 lg:py-13">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24">
           
           {/* ====== IMAGE COLUMN ====== */}

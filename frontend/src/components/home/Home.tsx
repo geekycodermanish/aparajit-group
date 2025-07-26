@@ -7,6 +7,8 @@ import OurValues from "./OurValues";
 import AboutSection from "./AboutSection";
 import DirectorSection from "./DirectorSection";
 import FeaturedProjectsSection from "./FeaturedProjectsSection";
+import {OurTeamSection} from "./OurTeamSection";
+import FromSection from "../../app/contact/FromSection";
 
 
 export default function Home() {
@@ -17,9 +19,11 @@ export default function Home() {
       <AboutSection />
       <OurValues />
       <ProjectsSection />
-      <DirectorSection />
       <FeaturedProjectsSection />
-      {/* <HorizontalProjectSlider /> */}
+      <DirectorSection />
+      <OurTeamSection />
+      <FromSection />
+
     </main>
   );
 }

@@ -19,10 +19,10 @@ export default function Header() {
 
   const navItems = [
     { name: 'HOME', path: '/' },
-    { name: 'RESIDENCES', path: '/properties' },
-    { name: 'AMENITIES', path: '/amenities' },
-    { name: 'LIFESTYLE', path: '/lifestyle' },
-    { name: 'DEVELOPMENTS', path: '/developments' },
+    { name: 'PROJECTS', path: '/projects' },
+    { name: 'ABOUT', path: '/about' },
+    { name: 'BLOG', path: '/blog' },
+    // { name: 'DEVELOPMENTS', path: '/developments' },
     { name: 'CONTACT', path: '/contact' }
   ]
 
@@ -89,8 +89,8 @@ export default function Header() {
                 scrolled ? 'text-gray-800 border-gray-300' : 'text-white border-white/30'
               }`}
             >
-              <option>EN</option>
-              <option>HI</option>
+              <option>IN</option>
+              <option>US</option>
             </select>
           </div>
 
