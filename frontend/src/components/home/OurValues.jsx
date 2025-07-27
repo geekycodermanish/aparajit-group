@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const OurValues = () => {
   const stats = [
-    { value: "24,500", label: "Units Delivered" },
-    { value: "~50 Million", label: "Square Feet Delivered" },
-    { value: "Building Concept", label: "Render" }
+    { value: "Farmhouses", label: "Upcoming projects" },
+    { value: "Highway and Road", label: "Delivered in Infra " },
+    { value: "Vedant city", label: "In real estate" }
   ];
 
   const marqueeVariants = {

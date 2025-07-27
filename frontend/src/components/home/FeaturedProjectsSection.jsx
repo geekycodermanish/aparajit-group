@@ -7,10 +7,10 @@ import { useState } from 'react';
 const projects = [
   {
     id: 1, 
-    name: 'The Aananda Frame',
+    name: 'The Aanandam Farm',
     video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
-      'Nestled against the majestic Aravalli Hills, The Aananda Frame is a sanctuary of rustic luxury. Each estate features a private fruit orchard, sustainable architecture, and modern amenities, offering a bespoke living experience where nature and sophistication coexist.',
+      'Nestled against the majestic Aravalli Hills, The Aanandam Farm is a sanctuary of rustic luxury. Each estate features a private fruit orchard, sustainable architecture, and modern amenities, offering a bespoke living experience where nature and sophistication coexist.',
   },
   // {
   //   id: 2,
@@ -101,7 +101,7 @@ export default function HeroOverlaySection() {
           transition={{ delay: 0.2, ...textVariants.visible.transition }}
           className="text-xs mt-6 opacity-80"
         >
-          ( Redefining Countryside Living )
+          (Naugaun ,Rajhathan)
         </motion.p>
       </div>
 

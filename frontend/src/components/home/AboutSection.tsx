@@ -36,8 +36,8 @@ const AboutSection = () => {
             </p>
             
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
-              Over <span className="font-medium">24,500 units</span> delivered,{' '}
-              <span className="font-medium">50 million square feet</span> crafted, but our proudest
+              Worked in  <span className="font-medium">INFRA </span> and {' '}
+              <span className="font-medium">Real ESTATE</span> As well but our proudest
               achievement?
             </p>
             
