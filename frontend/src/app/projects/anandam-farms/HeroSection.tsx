@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -12,12 +13,19 @@ export default function HeroSection() {
     '/images/pic_3.jpg'
   ]
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlide(prev => (prev === heroImages.length - 1 ? 0 : prev + 1))
+  //   }, 3000)
+  //   return () => clearInterval(interval)
+  // }, [])
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev === heroImages.length - 1 ? 0 : prev + 1))
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+  const interval = setInterval(() => {
+    setCurrentSlide(prev => (prev === heroImages.length - 1 ? 0 : prev + 1))
+  }, 3000)
+  return () => clearInterval(interval)
+}, [heroImages.length])
 
   return (
     <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20">
@@ -28,10 +36,12 @@ export default function HeroSection() {
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
-            <img
+            <Image
               src={image}
               alt={`Luxury green property ${index + 1}`}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
             />
             {/* Reduced green tint opacity from 30% to 15% */}
             <div className="absolute inset-0 bg-emerald-900/15" />

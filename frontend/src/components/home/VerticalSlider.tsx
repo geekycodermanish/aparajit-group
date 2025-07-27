@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -31,21 +31,33 @@ export default function VerticalSlider() {
     },
   ]
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === properties.length - 1 ? 0 : prev + 1))
-  }
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev === properties.length - 1 ? 0 : prev + 1))
+  // }
+
+  const nextSlide = useCallback(() => {
+  setCurrentSlide((prev) => (prev === properties.length - 1 ? 0 : prev + 1))
+}, [properties.length])
+
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? properties.length - 1 : prev - 1))
   }
 
   // Auto-rotate slides every 5 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide()
+  //   }, 5000)
+  //   return () => clearInterval(interval)
+  // }, [currentSlide])
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [currentSlide])
+  const interval = setInterval(() => {
+    nextSlide()
+  }, 5000)
+  return () => clearInterval(interval)
+}, [nextSlide])
 
   return (
     <>

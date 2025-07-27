@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi'
 
 export default function ContactPage() {
   return (
