@@ -55,7 +55,7 @@ export function OurTeamSection() {
       image: "/images/virat_image.jpg",
     },
     {
-      name: "Rajesh Kumar",
+      name: "Rohan Kumar",
       title: "Chief Engineer",
       image: "/images/virat_image.jpg",
     },
