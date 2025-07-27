@@ -15,10 +15,10 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="text-[2.8rem] leading-[1.1] md:text-[3.5rem] lg:text-[4rem] font-black tracking-[-0.03em]"
           >
-            <span className="block">Reimagining Real</span>
-            <span className="block">Estate, One</span>
-            <span className="block">Community at</span>
-            <span className="block">a Time</span>
+            <span className="block">Reimagining Infra</span>
+            <span className="block">And Real State </span>
+            <span className="block">at The</span>
+            <span className="block">Same Time</span>
           </motion.h2>
         </div>
 

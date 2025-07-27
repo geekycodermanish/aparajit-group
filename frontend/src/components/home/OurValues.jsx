@@ -44,7 +44,7 @@ const OurValues = () => {
                 className="w-full h-full object-cover rounded-2xl" 
               />
               <div className="absolute bottom-4 left-4 bg-white bg-opacity-80 text-black text-xs px-3 py-1 rounded-full">
-                This is an actual image
+               
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ const OurValues = () => {
                   className="w-full h-full object-cover rounded-2xl" 
                 />
                 <div className="absolute bottom-4 left-4 bg-white bg-opacity-80 text-black text-xs px-3 py-1 rounded-full">
-                  Conceptual shot of the Americana Ve-G-Greene residences
+                  
                 </div>
               </div>
             </div>

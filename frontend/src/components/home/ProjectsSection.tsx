@@ -15,20 +15,20 @@ const projects = [
     features: ['RCC roads', 'Sewage treatment', 'Solar lights']
   },
   {
-    id: 'ROB (Road over bridge).',
-    title: 'ROB (Road over bridge).',
-    location: 'Bankhadi , himachal pradesh',
-    description: 'A road over bridge project located in Bankhadi, Himachal Pradesh.',
+    id: 'ROB (Railway over bridge).',
+    title: 'ROB (Railway over bridge).',
+    location: 'Bankhadi ,Madhya pradesh',
+    description: 'A railway over bridge project located in Bankhadi, Madhya Pradesh.',
     image: '/images/projects/project_2.jpg',
     features: ['Modern Infrastructure', 'Deck slab', 'Load consideration']
   },
   {
-    id: 'oasis-villas',
-    title: 'Oasis Villas',
-    location: 'Sohna Road, Gurugram',
-    description: 'Discover a private sanctuary of exclusive villas, where luxury is in every detail.',
-    image: '/images/pic_4.jpg',
-    features: ['Beach Access', 'Home Spa', '24/7 Concierge']
+    id: 'Road construction',
+    title: 'Road construction',
+    location: 'J&K',
+    description: 'A road cunstruction project in jammu and kashmir ',
+    image: '/images/projects/project_4.jpg',
+    features: ['Modern Equipment', 'Safety Measures', 'Advanced Surveying & Planning']
   },
 ]
 
