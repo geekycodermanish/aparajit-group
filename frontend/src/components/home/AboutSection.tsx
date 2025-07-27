@@ -37,7 +37,7 @@ const AboutSection = () => {
             
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
               Worked in  <span className="font-medium">INFRA </span> and {' '}
-              <span className="font-medium">Real ESTATE</span> As well but our proudest
+              <span className="font-medium">REAL ESTATE</span> As well but our proudest
               achievement?
             </p>
             
