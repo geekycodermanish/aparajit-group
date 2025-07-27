@@ -64,10 +64,6 @@ export default function ContactSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <button className="mt-4 w-full px-4 py-2 bg-amber-500 text-white rounded-md flex items-center justify-center gap-2">
-                <FiMapPin size={18} />
-                Explore Our Projects
-              </button>
             </div>
           </motion.div>
 
@@ -89,18 +85,18 @@ export default function ContactSection() {
             <form className="space-y-6">
               <input
                 type="text"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none"
-                placeholder="Name*"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                placeholder="Enter your name"
               />
               <input
                 type="tel"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none"
-                placeholder="Phone Number*"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                placeholder="Enter your phone number"
               />
               <input
                 type="email"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none"
-                placeholder="Email*"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                placeholder="Enter your email"
               />
               <select className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none">
                 <option>Contact Type</option>
