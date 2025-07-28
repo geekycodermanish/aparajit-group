@@ -13,9 +13,9 @@ export default function Footer() {
                 <span className="text-3xl font-serif font-medium tracking-wider text-white">APARAJIT</span>
                 <div className="absolute -bottom-1 left-0 h-0.5 w-16 bg-amber-500"></div>
               </div>
-              <span className="text-xs tracking-[0.3em] text-amber-500 mt-6">ESTATE GROUP</span>
+              <span className="text-xs tracking-[0.3em] text-amber-500 mt-6">GROUP</span>
               <p className="text-gray-400 leading-relaxed text-sm mt-8 max-w-md">
-                Redefining luxury living through exceptional craftsmanship and unparalleled service since 1995.
+                Redefining Real estate and Infra through exceptional craftsmanship and unparalleled service since 1995.
               </p>
             </div>
           </div>
@@ -24,7 +24,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xs font-medium tracking-[0.3em] uppercase mb-8 text-white">EXPLORE</h3>
             <ul className="space-y-4">
-              <li><Link href="/properties" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Global Properties</Link></li>
+              <li><Link href="/properties" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Delivered Projects</Link></li>
               <li><Link href="/developments" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">New Developments</Link></li>
               <li><Link href="/architecture" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Signature Architecture</Link></li>
               <li><Link href="/interiors" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Interior Design</Link></li>
