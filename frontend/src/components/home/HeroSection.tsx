@@ -94,12 +94,13 @@ export default function HeroSection() {
       <div className="relative z-10 h-full flex flex-col justify-end pb-16 pl-12 text-white">
         <div className="max-w-2xl space-y-4">
           <h1 className="text-4xl sm:text-5xl font-serif font-bold tracking-tight leading-tight">
-            Building Landmarks Shaping  in an Era
+            Creating an Era by 
+            Building landmarks
           </h1>
           <div className="h-px w-24 bg-amber-500 my-4" />
           <p className="text-sm sm:text-base font-sans font-light leading-relaxed text-white/90">
             At <span className="font-semibold text-amber-400">APARAJIT GROUP</span>, we are committed to transforming visions into reality through high-quality construction. 
-            From Highways , Road to Industrial cities and Farmhouses with large-scale infrastructure projects, 
+            From Highways , Road to Industrial and Residential cities and Farmhouses with large-scale infrastructure projects, 
             we build with purpose, precision, and long-lasting impact. 
             Our foundation is built on trust, technology, and timely execution.
           </p>

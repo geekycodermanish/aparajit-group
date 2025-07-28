@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
               <span className="text-xs tracking-[0.3em] text-amber-500 mt-6">GROUP</span>
               <p className="text-gray-400 leading-relaxed text-sm mt-8 max-w-md">
-                Redefining Real estate and Infra through exceptional craftsmanship and unparalleled service since 1995.
+                Redefining Real estate and Infra through exceptional craftsmanship and unparalleled service since 2005.
               </p>
             </div>
           </div>

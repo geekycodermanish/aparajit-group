@@ -50,23 +50,23 @@ export function OurTeamSection() {
 
   const teamMembers = [
     {
-      name: "Priya Sharma",
-      title: "Head of Design",
+      name: "Deepak Prashant",
+      title: "Board Member",
       image: "/images/virat_image.jpg",
     },
     {
-      name: "Rohan Kumar",
-      title: "Chief Engineer",
+      name: "Naresh Kumar",
+      title: "Project Director",
       image: "/images/virat_image.jpg",
     },
     {
-      name: "Sneha Gupta",
-      title: "Client Relations Director",
+      name: "Rajesh Kumar",
+      title: "Operations Head",
       image: "/images/virat_image.jpg",
     },
     {
-      name: "Vikram Reddy",
-      title: "Project Manager",
+      name: "Radhay Shyam",
+      title: "Technical Director",
       image: "/images/virat_image.jpg",
     },
   ]
