@@ -72,7 +72,8 @@ export default function HorizontalProjectSlider() {
                 key={project.id} 
                 className="relative h-[80vh] w-[90vw] md:w-[70vw] flex-shrink-0 mx-4 md:mx-8 rounded-2xl overflow-hidden group"
               >
-                <Link href={`/projects/${project.id}`} className="absolute inset-0 z-20" aria-label={`View ${project.title}`} />
+                {/* project page not ready */}
+                {/* <Link href={`/projects/${project.id}`} className="absolute inset-0 z-20" aria-label={`View ${project.title}`} /> */}
                 
                 {/* Project Image */}
                 <div className="absolute inset-0 z-0">

@@ -138,7 +138,7 @@ export default function BlogPage() {
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 {featuredPost.excerpt}
               </p>
-              <button onClick={() => openModal(featuredPost)} className="inline-flex items-center text-orange-500 font-bold group">
+              <button onClick={() => openModal(featuredPost)} className="inline-flex items-center text-orange-500 font-bold group cursor-pointer">
                 Read Full Article
                 <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -179,12 +179,12 @@ export default function BlogPage() {
                     <span>{post.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
-                    <button onClick={() => openModal(post)}>{post.title}</button>
+                    {post.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
                   <button
                     onClick={() => openModal(post)}
-                    className="inline-flex items-center text-sm text-orange-500 font-bold group"
+                    className="inline-flex items-center text-sm text-orange-500 font-bold group cursor-pointer"
                   >
                     Read More
                     <svg className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
