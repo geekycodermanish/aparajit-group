@@ -4,7 +4,7 @@ import { FiAward, FiUsers, FiCheckCircle, FiMapPin } from 'react-icons/fi'
 
 export default function ContactSection() {
   return (
-    <section className="relative py-20 bg-gray-50">
+    <section id="contact" className="relative py-20 bg-gray-50">
       {/* Background with ultra-low opacity */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
 
@@ -85,17 +85,17 @@ export default function ContactSection() {
             <form className="space-y-6">
               <input
                 type="text"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
                 placeholder="Enter your name"
               />
               <input
                 type="tel"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
                 placeholder="Enter your phone number"
               />
               <input
                 type="email"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
                 placeholder="Enter your email"
               />
               <select className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none">

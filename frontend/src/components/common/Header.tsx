@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,13 +24,35 @@ export default function Header() {
     { name: 'PROJECTS', path: '/projects' },
     { name: 'ABOUT', path: '/about' },
     { name: 'BLOG', path: '/blog' },
-    // { name: 'DEVELOPMENTS', path: '/developments' },
-    { name: 'CONTACT', path: '/contact' }
+    { name: 'CONTACT', path: '/contact' } // will be used to scroll to #contact on home page
   ]
+
+const handleNavClick = (path: string) => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  if (pathname === '/') {
+    if (path === '/contact') {
+      scrollToSection('contact')
+    } else if (path === '/projects') {
+      scrollToSection('projects')
+    } else if (path === '/about') {
+      scrollToSection('about')
+    } else {
+      window.location.href = path
+    }
+  } else {
+    window.location.href = path
+  }
+}
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-      {/* Top Contact Bar - Hidden on scroll */}
+      {/* Top Contact Bar */}
       <div className={`hidden md:block transition-all duration-500 overflow-hidden ${scrolled ? 'max-h-0' : 'max-h-10'}`}>
         <div className="max-w-8xl mx-auto px-6">
           <div className="flex justify-end items-center py-1 text-xs font-medium tracking-wider text-white">
@@ -48,10 +72,10 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
+      {/* Main Navbar */}
       <div className="max-w-8xl mx-auto px-6">
         <div className="flex justify-between items-center py-3">
-          {/* LOGO - Smaller and more prominent */}
+          {/* LOGO */}
           <Link href="/" className="flex items-center h-10 w-auto ml-[5%]">
             <Image
               src="/images/LOGO.png"
@@ -63,28 +87,28 @@ export default function Header() {
             />
           </Link>
 
-          {/* DESKTOP NAV - Stronger typography */}
+          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center absolute left-2/3 transform -translate-x-1/2">
             <div className="flex space-x-6">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link
-                    href={item.path}
+                  <button
+                    onClick={() => handleNavClick(item.path)}
                     className={`text-xs font-semibold tracking-[0.15em] transition-colors duration-300 uppercase ${
                       scrolled ? 'text-gray-800 hover:text-amber-600' : 'text-white hover:text-amber-300'
                     }`}
                   >
                     {item.name}
-                  </Link>
-                  <div className={`absolute left-0 bottom-0 h-[2px] w-0 bg-amber-500 transition-all duration-300 group-hover:w-full`} />
+                  </button>
+                  <div className="absolute left-0 bottom-0 h-[2px] w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
                 </div>
               ))}
             </div>
           </nav>
 
-          {/* Language Selector - Compact */}
+          {/* Language Selector */}
           <div className="hidden md:flex items-center ml-auto">
-            <select 
+            <select
               className={`bg-transparent text-xs font-semibold tracking-wider uppercase focus:outline-none border-l pl-3 ${
                 scrolled ? 'text-gray-800 border-gray-300' : 'text-white border-white/30'
               }`}
@@ -94,7 +118,7 @@ export default function Header() {
             </select>
           </div>
 
-          {/* MOBILE TOGGLE - More prominent */}
+          {/* MOBILE MENU TOGGLE */}
           <button
             className="md:hidden p-2 focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -108,27 +132,31 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MOBILE NAV MENU - Stronger typography */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-        mobileMenuOpen ? 'max-h-screen' : 'max-h-0'
-      } ${scrolled ? 'bg-white' : 'bg-gray-900'}`}>
+      {/* MOBILE NAV MENU */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          mobileMenuOpen ? 'max-h-screen' : 'max-h-0'
+        } ${scrolled ? 'bg-white' : 'bg-gray-900'}`}
+      >
         <div className="flex flex-col space-y-0 px-4 py-3">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              href={item.path}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                handleNavClick(item.path)
+                setMobileMenuOpen(false)
+              }}
               className={`py-3 px-4 text-sm font-semibold uppercase tracking-wider transition-colors ${
-                scrolled 
-                  ? 'text-gray-800 hover:bg-gray-100 border-b border-gray-100' 
+                scrolled
+                  ? 'text-gray-800 hover:bg-gray-100 border-b border-gray-100'
                   : 'text-white hover:bg-gray-800 border-b border-gray-800'
               }`}
             >
               {item.name}
-            </Link>
+            </button>
           ))}
           <div className="mt-2 pt-3 border-t border-gray-200 px-4">
-            <select 
+            <select
               className={`w-full py-2 px-3 bg-transparent text-sm font-medium uppercase rounded border ${
                 scrolled ? 'text-gray-800 border-gray-300' : 'text-white border-white/30'
               }`}

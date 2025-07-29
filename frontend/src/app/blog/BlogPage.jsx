@@ -3,84 +3,101 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function BlogPage() {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of Luxury Farmland Investments",
-      excerpt: "Exploring how premium agricultural properties are becoming the new status symbol for discerning investors.",
+      title: "Innovative Construction Techniques for 2025",
+      excerpt: "Exploring cutting-edge building methods that are revolutionizing the construction industry.",
+      content: `Full content for Innovative Construction Techniques for 2025.\n\nIn this blog, we dive deep into modern engineering advancements, robotics in construction, 3D printing of buildings, and how AI is helping optimize project timelines.`,
       date: "June 15, 2025",
-      category: "Investment",
+      category: "Technology",
       readTime: "5 min read",
       image: "/images/pic_1.jpg"
     },
     {
       id: 2,
-      title: "Sustainable Practices for High-Value Farm Estates",
-      excerpt: "How regenerative agriculture is increasing land value while improving ecosystem health.",
+      title: "Sustainable Materials for Modern Construction",
+      excerpt: "How eco-friendly materials are changing the way we build for a greener future.",
+      content: `Full blog content on Sustainable Materials.\n\nFrom bamboo to recycled plastic composites, the modern world of eco-friendly construction has grown drastically in the last decade.`,
       date: "May 28, 2025",
       category: "Sustainability",
       readTime: "4 min read",
-      image: "/images/pic_2.jpg"
+      image: "/images/pic_1.jpg"
     },
     {
       id: 3,
-      title: "2025 Market Trends for Agricultural Real Estate",
-      excerpt: "Key insights into what's driving demand for premium farmland in South Delhi and beyond.",
+      title: "2025 Construction Industry Trends",
+      excerpt: "Key insights into what's driving demand and innovation in the building sector.",
+      content: `Here's what’s trending in 2025: modular buildings, digital twins, remote site monitoring, and sustainability goals integrated into every step of the process.`,
       date: "April 12, 2025",
-      category: "Market Trends",
+      category: "Trends",
       readTime: "6 min read",
-      image: "/images/pic_3.jpg"
+      image: "/images/pic_1.jpg"
     },
     {
       id: 4,
-      title: "Designing Luxury Farmhouses That Respect the Land",
-      excerpt: "Architectural principles for creating elegant estates that work with nature.",
+      title: "Designing for Durability: Structures That Last",
+      excerpt: "Engineering principles for creating buildings that stand the test of time.",
+      content: `Discover engineering principles behind long-lasting structures, including load distribution, seismic resistance, waterproofing, and climate-optimized design.`,
       date: "March 30, 2025",
-      category: "Design",
+      category: "Engineering",
       readTime: "7 min read",
-      image: "/images/pic_4.jpg"
+      image: "/images/pic_1.jpg"
     },
     {
       id: 5,
-      title: "Legal Considerations When Purchasing Farmland",
-      excerpt: "Essential due diligence steps for high-value agricultural property transactions.",
+      title: "Safety Innovations on Construction Sites",
+      excerpt: "The latest technologies keeping construction workers safe on the job.",
+      content: `Explore cutting-edge innovations like smart helmets, wearables, site sensors, and AI-based accident prediction tools that are transforming job site safety.`,
       date: "February 18, 2025",
-      category: "Legal",
+      category: "Safety",
       readTime: "8 min read",
-      image: "/images/pic_5.jpg"
+      image: "/images/pic_1.jpg"
     },
-    
   ]
 
   const featuredPost = blogPosts[0]
+  const [activePost, setActivePost] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = (post) => {
+    setActivePost(post)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setActivePost(null)
+    setIsModalOpen(false)
+  }
 
   return (
     <>
       <Head>
-        <title>BNW Insights | Luxury Farmland Blog</title>
-        <meta name="description" content="Expert insights on luxury farmland investment, sustainable practices, and market trends" />
+        <title>BuildMaster Blog | Construction Insights</title>
+        <meta name="description" content="Expert insights on construction techniques, materials, and industry trends" />
       </Head>
 
       {/* Hero Section */}
-      <div className="relative bg-emerald-900 py-28 overflow-hidden">
+      <div className="relative bg-gray-900 py-28 overflow-hidden">
         <Image
-          src="/images/blog-hero.jpg"
-          alt="Luxury Farmland Blog"
+          src="/images/pic_1.jpg"
+          alt="Construction Blog"
           fill
           className="object-cover opacity-70"
           quality={100}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/90 to-emerald-900/50" />
-        
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/50" />
+
         <div className="relative max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-6xl font-light text-white mb-4">
-            <span className="font-serif italic text-emerald-200">BNW</span> Insights
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <span className="text-orange-400">Build</span>Master Insights
           </h1>
-          <div className="w-24 h-1 bg-amber-400 my-6" />
-          <p className="text-xl md:text-2xl text-emerald-50 max-w-2xl leading-relaxed">
-            Expert perspectives on luxury farmland investment, sustainable practices, and market trends
+          <div className="w-24 h-1 bg-orange-500 my-6" />
+          <p className="text-xl md:text-2xl text-gray-100 max-w-2xl leading-relaxed">
+            Professional perspectives on construction technology, materials, and industry developments
           </p>
         </div>
       </div>
@@ -89,13 +106,13 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-6 py-20">
         {/* Featured Post */}
         <div className="mb-20">
-          <h2 className="text-2xl font-light text-emerald-800 mb-8 flex items-center">
-            <span className="font-serif italic mr-2">Featured</span> Article
-            <span className="ml-4 w-12 h-px bg-emerald-300 flex-grow"></span>
+          <h2 className="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+            <span className="text-orange-500 mr-2">Featured</span> Article
+            <span className="ml-4 w-12 h-px bg-gray-300 flex-grow"></span>
           </h2>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="relative h-96 lg:h-auto rounded-2xl overflow-hidden group">
+            <div className="relative h-96 lg:h-auto rounded-lg overflow-hidden group border-4 border-white shadow-xl">
               <Image
                 src={featuredPost.image}
                 alt={featuredPost.title}
@@ -103,45 +120,45 @@ export default function BlogPage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 quality={100}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 p-8">
-                <span className="inline-block px-3 py-1 bg-amber-400 text-emerald-900 text-xs font-medium rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-sm mb-3">
                   {featuredPost.category}
                 </span>
-                <h3 className="text-2xl md:text-3xl font-medium text-white">{featuredPost.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">{featuredPost.title}</h3>
               </div>
             </div>
-            
+
             <div>
-              <div className="flex items-center text-emerald-600 mb-4">
+              <div className="flex items-center text-gray-600 mb-4">
                 <span>{featuredPost.date}</span>
                 <span className="mx-2">•</span>
                 <span>{featuredPost.readTime}</span>
               </div>
-              <p className="text-lg text-emerald-700 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 {featuredPost.excerpt}
               </p>
-              <Link href={`/blog/${featuredPost.id}`} className="inline-flex items-center text-emerald-600 font-medium group">
+              <button onClick={() => openModal(featuredPost)} className="inline-flex items-center text-orange-500 font-bold group">
                 Read Full Article
                 <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
 
         {/* All Posts */}
         <div>
-          <h2 className="text-2xl font-light text-emerald-800 mb-8 flex items-center">
-            Latest <span className="font-serif italic mx-2">Articles</span>
-            <span className="ml-4 w-12 h-px bg-emerald-300 flex-grow"></span>
+          <h2 className="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+            Latest <span className="text-orange-500 mx-2">Articles</span>
+            <span className="ml-4 w-12 h-px bg-gray-300 flex-grow"></span>
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(1).map(post => (
-              <article key={post.id} className="group">
-                <div className="relative h-64 rounded-xl overflow-hidden mb-4">
+              <article key={post.id} className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative h-64 rounded-t-lg overflow-hidden">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -149,60 +166,67 @@ export default function BlogPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     quality={100}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/40 via-transparent to-transparent" />
-                  <span className="absolute top-4 left-4 px-2 py-1 bg-white text-emerald-800 text-xs font-medium rounded">
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 via-transparent to-transparent" />
+                  <span className="absolute top-4 left-4 px-2 py-1 bg-orange-500 text-white text-xs font-bold rounded-sm">
                     {post.category}
                   </span>
                 </div>
-                <div className="flex items-center text-sm text-emerald-600 mb-2">
-                  <span>{post.date}</span>
-                  <span className="mx-2">•</span>
-                  <span>{post.readTime}</span>
+
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-gray-500 mb-2">
+                    <span>{post.date}</span>
+                    <span className="mx-2">•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
+                    <button onClick={() => openModal(post)}>{post.title}</button>
+                  </h3>
+                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                  <button
+                    onClick={() => openModal(post)}
+                    className="inline-flex items-center text-sm text-orange-500 font-bold group"
+                  >
+                    Read More
+                    <svg className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </button>
                 </div>
-                <h3 className="text-xl font-medium text-emerald-900 mb-2 group-hover:text-amber-600 transition-colors">
-                  <Link href={`/blog/${post.id}`}>{post.title}</Link>
-                </h3>
-                <p className="text-emerald-700 mb-4">{post.excerpt}</p>
-                <Link 
-                  href={`/blog/${post.id}`} 
-                  className="inline-flex items-center text-sm text-emerald-600 font-medium group"
-                >
-                  Read More
-                  <svg className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
               </article>
             ))}
           </div>
         </div>
 
-        {/* Newsletter CTA */}
-        <div className="mt-20 bg-emerald-800/10 rounded-2xl p-8 md:p-12">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-light text-emerald-900 mb-4">
-              <span className="font-serif italic">Subscribe</span> to Our Insights
-            </h3>
-            <p className="text-emerald-700 mb-6 max-w-2xl mx-auto">
-              Get the latest luxury farmland investment insights delivered directly to your inbox
+
+      </div>
+
+      {/* Modal */}
+      {isModalOpen && activePost && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4">
+          <div className="bg-white rounded-lg max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
+            <button
+              onClick={closeModal}
+              className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl"
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">{activePost.title}</h2>
+            <p className="text-sm text-gray-500 mb-2">
+              {activePost.date} • {activePost.readTime} • <span className="text-orange-500">{activePost.category}</span>
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="flex-grow px-4 py-3 rounded-lg border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent"
-                required
-              />
-              <button 
-                type="submit"
-                className="px-6 py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-medium rounded-lg transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+            <Image
+              src={activePost.image}
+              alt={activePost.title}
+              width={800}
+              height={400}
+              className="rounded-lg mb-6"
+            />
+            <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+              {activePost.content}
+            </p>
           </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
