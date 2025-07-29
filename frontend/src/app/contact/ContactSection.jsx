@@ -27,18 +27,18 @@ export default function ContactSection() {
               {[
                 {
                   icon: <FiAward className="text-amber-500" size={24} />,
-                  title: "Industry Leaders Since 2005",
-                  desc: "Recognized for excellence in luxury real estate development"
+                  title: "Well Experienced Technical team",
+                  desc: "We have a very well experienced team in infrastructure field"
                 },
                 {
                   icon: <FiUsers className="text-amber-500" size={24} />,
-                  title: "5000+ Satisfied Clients",
-                  desc: "Join our community of discerning property owners"
+                  title: "Expert Real estate advisor",
+                  desc: "We have expert real estate advisor for purchase and planning"
                 },
                 {
                   icon: <FiCheckCircle className="text-amber-500" size={24} />,
                   title: "End-to-End Service",
-                  desc: "From consultation to handover, we handle everything"
+                  desc: "Even after purchase we have team for maintanance and facilitate"
                 }
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 group">
