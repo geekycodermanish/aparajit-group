@@ -1,8 +1,8 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 import { connectToDatabase } from '@/lib/mongodb'
 import Contact from '@/models/Contact'
 
-export async function POST(req) {
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
     const { name, phone, email, type } = body

@@ -114,7 +114,7 @@ const handleNavClick = (path: string) => {
               }`}
             >
               <option>IN</option>
-              <option>US</option>
+              {/* <option>US</option> */}
             </select>
           </div>
 
@@ -161,8 +161,8 @@ const handleNavClick = (path: string) => {
                 scrolled ? 'text-gray-800 border-gray-300' : 'text-white border-white/30'
               }`}
             >
-              <option>English</option>
-              <option>हिंदी</option>
+              <option>INDIA</option>
+              {/* <option>हिंदी</option> */}
             </select>
           </div>
         </div>
