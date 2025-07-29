@@ -15,9 +15,9 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="text-[2.8rem] leading-[1.1] md:text-[3.5rem] lg:text-[4rem] font-black tracking-[-0.03em]"
           >
-            <span className="block">Reimagining Infra</span>
-            <span className="block">And Real State </span>
-            <span className="block">at The</span>
+            <span className="block">Recreating Infra </span>
+            <span className="block">& Real Estate</span>
+            <span className="block">Sector at The</span>
             <span className="block">Same Time</span>
           </motion.h2>
         </div>
@@ -31,18 +31,17 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
-              From the Unimark Healthcare LTD. in Dwarka to The Synokrm Pharmaceutical LTD. Haridwar
-              our journey has been one of transformation—turning untapped landscapes into bustling, thriving communities.
+              APARAJIT GROUP is a group of companies founded by Honerable managing Director ,Sh Anand Singh having over 25 years of rich experience in Real Estate &
+              Infrastructure development ,over 100 Builder floor and many city mall developed in diffrent cities over india.
             </p>
             
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
-              Worked in  <span className="font-medium">INFRA </span> and {' '}
-              <span className="font-medium">Real ESTATE</span> As well but our proudest
-              achievement?
+              Projects like <span className="font-medium">UNIMARK HEALTHCARE LTD. (HARIDWAR)</span> and {' '}
+              <span className="font-medium">KOTA SUPAR THERMAL</span> As well.
             </p>
             
             <p className="text-xl md:text-2xl lg:text-[1.7rem] leading-tight tracking-tight font-medium italic">
-              Building places that feel like home.
+
             </p>
           </motion.div>
 

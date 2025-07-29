@@ -329,7 +329,7 @@ export default function AboutPage() {
               }
             ].map((testimonial, index) => (
               <div key={index} className="border border-gray-200 p-8">
-                <div className="text-amber-600 text-4xl mb-4">"</div>
+                <div className="text-amber-600 text-4xl mb-4">&quot;</div>
                 <p className="text-gray-700 italic mb-6">{testimonial.quote}</p>
                 <div>
                   <p className="font-medium">{testimonial.author}</p>

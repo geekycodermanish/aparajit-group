@@ -45,10 +45,15 @@ export default function PremiumFarmlandSlider() {
     setCurrentSlide(prev => (prev === 0 ? farmlands.length - 1 : prev - 1))
   }
 
+  // useEffect(() => {
+  //   const interval = setInterval(nextSlide, 7000)
+  //   return () => clearInterval(interval)
+  // }, [currentSlide])
+
   useEffect(() => {
-    const interval = setInterval(nextSlide, 7000)
-    return () => clearInterval(interval)
-  }, [currentSlide])
+  const interval = setInterval(nextSlide, 7000)
+  return () => clearInterval(interval)
+}, [currentSlide, nextSlide])
 
   return (
     <>
