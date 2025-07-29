@@ -3,6 +3,34 @@ import { motion } from 'framer-motion'
 import { FiAward, FiUsers, FiCheckCircle, FiMapPin } from 'react-icons/fi'
 
 export default function ContactSection() {
+
+  async function handleSubmit(e) {
+  e.preventDefault()
+  const form = new FormData(e.target)
+
+  const res = await fetch('/api/contact', {
+    method: 'POST',
+    body: JSON.stringify({
+      name: form.get('name'),
+      phone: form.get('phone'),
+      email: form.get('email'),
+      type: form.get('type'),
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  const data = await res.json()
+
+  if (res.ok) {
+    alert('Submitted successfully')
+    e.target.reset()
+  } else {
+    alert('Error: ' + data.error)
+  }
+}
+
   return (
     <section id="contact" className="relative py-20 bg-gray-50">
       {/* Background with ultra-low opacity */}
@@ -82,36 +110,48 @@ export default function ContactSection() {
               Share your vision and we'll craft the perfect solution.
             </p>
 
-            <form className="space-y-6">
-              <input
-                type="text"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
-                placeholder="Enter your name"
-              />
-              <input
-                type="tel"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
-                placeholder="Enter your phone number"
-              />
-              <input
-                type="email"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
-                placeholder="Enter your email"
-              />
-              <select className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none">
-                <option>Contact Type</option>
-                <option>Residential Inquiry</option>
-                <option>Commercial Inquiry</option>
-                <option>Investment Opportunity</option>
-                <option>General Question</option>
-              </select>
-              <button
-                type="submit"
-                className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-lg transition font-medium"
-              >
-                Schedule Consultation
-              </button>
-            </form>
+<form className="space-y-6" onSubmit={handleSubmit}>
+  <input
+    name="name"
+    type="text"
+    className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
+    placeholder="Enter your name"
+    required
+  />
+  <input
+    name="phone"
+    type="tel"
+    className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
+    placeholder="Enter your phone number"
+    required
+  />
+  <input
+    name="email"
+    type="email"
+    className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
+    placeholder="Enter your email"
+    required
+  />
+  <select
+    name="type"
+    className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none text-gray-800"
+    required
+  >
+    <option value="">Contact Type</option>
+    <option value="Residential Inquiry">Residential Inquiry</option>
+    <option value="Commercial Inquiry">Commercial Inquiry</option>
+    <option value="Investment Opportunity">Investment Opportunity</option>
+    <option value="General Question">General Question</option>
+  </select>
+
+  <button
+    type="submit"
+    className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-lg transition font-medium"
+  >
+    Schedule Consultation
+  </button>
+</form>
+
           </motion.div>
         </div>
       </div>
