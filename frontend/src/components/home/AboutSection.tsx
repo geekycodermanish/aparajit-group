@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const AboutSection = () => {
   return (
-    <section className="bg-white text-black px-4 md:px-20 pt-24 md:pt-32">
+    <section id="about" className="bg-white text-black px-4 md:px-20 pt-24 md:pt-32">
       <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-12 md:gap-20">
         {/* Left Side - Headline */}
         <div className="w-full lg:w-1/2">

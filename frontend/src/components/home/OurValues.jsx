@@ -1,4 +1,5 @@
 // pages/index.js (or app/page.js if using App Router)
+'use client';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
@@ -59,6 +60,7 @@ const OurValues = () => {
                 variants={marqueeVariants}
                 animate="animate"
               >
+                {/* stats duplication for marquee container swipe speed */}
                 {[...stats, ...stats].map((stat, index) => (
                   <div
                     key={`stat-${index}`}

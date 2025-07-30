@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRef } from 'react'
 
 const projects = [
@@ -39,26 +38,26 @@ export default function HorizontalProjectSlider() {
     offset: ['start start', 'end end']
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-70%'])
+  const x = useTransform(scrollYProgress, [0, 1], ['0%', '-58%'])
 
   return (
-    <div className="bg-white">
+    <section id="projects" className="bg-white">
       {/* Header */}
-<div className="sticky top-0 z-10 bg-white pt-20 pb-10 px-6 md:px-12">
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="max-w-4xl mx-auto"
-  >
-    <div className="relative text-center">
-      <span className="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-800 font-serif text-xl md:text-2xl tracking-widest uppercase">
-        — Our Projects —
-      </span>
-      <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-px bg-gray-200 -z-10" />
-    </div>
-  </motion.div>
-</div>
+        <div className="sticky top-0 z-10 bg-white pt-20 pb-10 px-6 md:px-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative text-center">
+              <span className="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-800 font-serif text-xl md:text-2xl tracking-widest uppercase">
+                — Our Projects —
+              </span>
+              <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-px bg-gray-200 -z-10" />
+            </div>
+          </motion.div>
+        </div>
 
       {/* Horizontal Slider */}
       <div ref={containerRef} className="relative h-[300vh]">
@@ -72,7 +71,8 @@ export default function HorizontalProjectSlider() {
                 key={project.id} 
                 className="relative h-[80vh] w-[90vw] md:w-[70vw] flex-shrink-0 mx-4 md:mx-8 rounded-2xl overflow-hidden group"
               >
-                <Link href={`/projects/${project.id}`} className="absolute inset-0 z-20" aria-label={`View ${project.title}`} />
+                {/* project page not ready */}
+                {/* <Link href={`/projects/${project.id}`} className="absolute inset-0 z-20" aria-label={`View ${project.title}`} /> */}
                 
                 {/* Project Image */}
                 <div className="absolute inset-0 z-0">
@@ -121,6 +121,6 @@ export default function HorizontalProjectSlider() {
         </div>
       </div>
 
-    </div>
+    </section>
   )
 }

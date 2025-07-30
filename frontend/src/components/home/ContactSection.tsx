@@ -1,10 +1,24 @@
 'use client'
 import { motion } from 'framer-motion'
-import { FiAward, FiUsers, FiCheckCircle, FiMapPin } from 'react-icons/fi'
+import { FiAward, FiUsers,FiCheckCircle } from 'react-icons/fi'
+import { submitContact } from '@/actions/submitContact';
+import { useTransition } from 'react';
+import Image from 'next/image';
 
 export default function ContactSection() {
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = (formData: FormData) => {
+    startTransition(async () => {
+      const result = await submitContact(formData);
+      if (result.success) {
+        console.log('Success:', result.message);
+      }
+    });
+  };
+
   return (
-    <section className="relative py-20 bg-gray-50">
+    <section id="contact" className="relative py-20 bg-gray-50">
       {/* Background with ultra-low opacity */}
       <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
 
@@ -58,10 +72,11 @@ export default function ContactSection() {
             {/* Image Section */}
             <div className="mt-12 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
               <div className="aspect-video overflow-hidden rounded-md">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                   alt="Our Projects" 
-                  className="w-full h-full object-cover"
+                  objectFit='cover'
+                  className="w-full h-full"
                 />
               </div>
             </div>
@@ -82,36 +97,57 @@ export default function ContactSection() {
               Share your vision and we'll craft the perfect solution.
             </p>
 
-            <form className="space-y-6">
+            <form className="space-y-6" action={handleSubmit}>
               <input
+                name="name"
                 type="text"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
                 placeholder="Enter your name"
+                required
+                disabled={isPending}
               />
               <input
+                name="phone"
                 type="tel"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
                 placeholder="Enter your phone number"
+                required
+                disabled={isPending}
+                pattern="^(\+[0-9]{7,13})$"
+                onFocus={(e) => {if(e.target.value === "") e.target.value = "+91"}}
+                onChange={(e) => {if(e.target.value === "") e.target.value = "+"}}
+                onBlur={(e) => {if(e.target.value === "+91" || e.target.value === "+") e.target.value = ""}}
               />
               <input
+                name="email"
                 type="email"
-                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
                 placeholder="Enter your email"
+                required
+                disabled={isPending}
               />
-              <select className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none">
-                <option>Contact Type</option>
-                <option>Residential Inquiry</option>
-                <option>Commercial Inquiry</option>
-                <option>Investment Opportunity</option>
-                <option>General Question</option>
+              <select
+                name="ctype"
+                className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none text-gray-800"
+                required
+                disabled={isPending}
+              >
+                <option value="">Contact Type</option>
+                <option value="Residential Inquiry">Residential Inquiry</option>
+                <option value="Commercial Inquiry">Commercial Inquiry</option>
+                <option value="Investment Opportunity">Investment Opportunity</option>
+                <option value="General Question">General Question</option>
               </select>
+
               <button
                 type="submit"
+                disabled={isPending}
                 className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 rounded-lg transition font-medium"
               >
-                Schedule Consultation
+                {isPending? "Sending..." : "Schedule Consultation"}
               </button>
             </form>
+
           </motion.div>
         </div>
       </div>

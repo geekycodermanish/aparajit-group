@@ -20,18 +20,6 @@ export default function HeroSection() {
     setProgress(0)
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const video = videoRef.current
-  //     if (video && isPlaying) {
-  //       const currentTime = video.currentTime
-  //       const duration = video.duration || 1
-  //       setProgress((currentTime / duration) * 100)
-  //     }
-  //   }, 100)
-  //   return () => clearInterval(interval)
-  // }, [isPlaying])
-
   useEffect(() => {
   const interval = setInterval(() => {
     const video = videoRef.current

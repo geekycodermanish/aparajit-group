@@ -1,8 +1,21 @@
 'use client'
 import { motion } from 'framer-motion'
 import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi'
+import { submitContact } from '@/actions/submitContact';
+import { useTransition } from 'react';
 
 export default function ContactPage() {
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = (formData: FormData) => {
+    startTransition(async () => {
+      const result = await submitContact(formData);
+      if (result.success) {
+        console.log('Success:', result.message);
+      }
+    });
+  };
+
   return (
     <div className="bg-white min-h-screen">
       {/* **Hero Section** */}
@@ -103,11 +116,14 @@ export default function ContactPage() {
             </h2>
             <div className="w-16 h-px bg-amber-500 mb-8" />
 
-            <form className="space-y-6">
+            <form action={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Full Name*</label>
                 <input
                   type="text"
+                  name="name"
+                  required
+                  disabled={isPending}
                   className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none transition"
                   placeholder="Enter your name"
                 />
@@ -118,6 +134,9 @@ export default function ContactPage() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email*</label>
                   <input
                     type="email"
+                    name="email"
+                    required
+                    disabled={isPending}
                     className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none transition"
                     placeholder="your@email.com"
                   />
@@ -126,16 +145,28 @@ export default function ContactPage() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
                   <input
                     type="tel"
+                    name="phone"
+                    required
+                    disabled={isPending}
+                    placeholder="+91..."
+                    pattern="^(\+[0-9]{7,13})$"
+                    onFocus={(e) => {if(e.target.value === "") e.target.value = "+91"}}
+                    onChange={(e) => {if(e.target.value === "") e.target.value = "+"}}
+                    onBlur={(e) => {if(e.target.value === "+91" || e.target.value === "+") e.target.value = ""}}
                     className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none transition"
-                    placeholder="+91 "
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Interest</label>
-                <select className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none transition">
-                  <option>Select property type</option>
+                <select
+                  name="ctype" 
+                  required
+                  disabled={isPending}
+                  className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none transition"
+                >
+                  <option value="">Select property type</option>
                   <option>Luxury Residences</option>
                   <option>Commercial</option>
                   <option>Land Acquisition</option>
@@ -146,6 +177,7 @@ export default function ContactPage() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea
                   rows={4}
+                  name="mes"
                   className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none transition"
                   placeholder="Your requirements..."
                 />
@@ -153,9 +185,10 @@ export default function ContactPage() {
 
               <button
                 type="submit"
+                disabled={isPending}
                 className="w-full bg-black hover:bg-gray-800 text-white py-4 px-6 transition duration-300 font-medium"
               >
-                Request Consultation
+                {isPending? "Sending..." : "Request Consultation"}
               </button>
             </form>
           </motion.div>
