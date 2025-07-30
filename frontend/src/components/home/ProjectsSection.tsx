@@ -7,10 +7,10 @@ import { useRef } from 'react'
 
 const projects = [
   {
-    id: 'Vedant City ',
+    id: 'Vedant City',
     title: 'Vedant City',
     location: 'Jhajjar,Haryana',
-    description: 'A real estate projects by Aparajit reality ,Offering both residential and industrial plots near Relience MET City',
+    description: 'A real estate projects by Aparajit group,Offering both residential and industrial plots near Relience MET City',
     image: '/images/projects/project_3.jpg',
     features: ['RCC roads', 'Sewage treatment', 'Solar lights']
   },
@@ -25,8 +25,8 @@ const projects = [
   {
     id: 'Road construction',
     title: 'Road construction',
-    location: 'J&K',
-    description: 'A road cunstruction project in jammu and kashmir ',
+    location: 'Arunachal pradesh',
+    description: 'A road cunstruction project in Arunachal pradesh',
     image: '/images/projects/project_4.jpg',
     features: ['Modern Equipment', 'Safety Measures', 'Advanced Surveying & Planning']
   },

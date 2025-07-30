@@ -56,8 +56,8 @@ export default function Header() {
             <Image
               src="/images/LOGO.png"
               alt="Aparajit Group"
-              width={80}
-              height={30}
+              width={120}
+              height={50}
               className={`transition-all duration-300 ${scrolled ? 'opacity-100' : 'opacity-90 hover:opacity-100'}`}
               priority
             />
