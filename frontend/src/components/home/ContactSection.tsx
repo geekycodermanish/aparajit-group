@@ -70,8 +70,8 @@ export default function ContactSection() {
             </div>
 
             {/* Image Section */}
-            <div className="mt-12 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-              <div className="aspect-video overflow-hidden rounded-md">
+            <div className="mt-12 bg-white p-4 rounded-lg shadow-sm border border-gray-100 group">
+              <div className="aspect-video relative overflow-hidden rounded-md">
                 <Image 
                   src="/images/unsp_farm.jpeg" 
                   alt="Our Projects" 
