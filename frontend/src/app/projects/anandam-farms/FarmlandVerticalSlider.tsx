@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -37,23 +37,19 @@ export default function PremiumFarmlandSlider() {
     }
   ]
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide(prev => (prev === farmlands.length - 1 ? 0 : prev + 1))
-  }
+  }, [farmlands.length])
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide(prev => (prev === 0 ? farmlands.length - 1 : prev - 1))
-  }
+  }, [farmlands.length])
 
-  // useEffect(() => {
-  //   const interval = setInterval(nextSlide, 7000)
-  //   return () => clearInterval(interval)
-  // }, [currentSlide])
-
+  // wrapped nextSlide and prevSlide in useCallback instead of farmlands array dependency
   useEffect(() => {
   const interval = setInterval(nextSlide, 7000)
   return () => clearInterval(interval)
-}, [currentSlide, nextSlide])
+}, [nextSlide, prevSlide])
 
   return (
     <>

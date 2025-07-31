@@ -20,7 +20,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative py-20 bg-gray-50">
       {/* Background with ultra-low opacity */}
-      <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"></div>
+      <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/unsp_drawing.jpeg')] bg-cover bg-center"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -73,10 +73,10 @@ export default function ContactSection() {
             <div className="mt-12 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
               <div className="aspect-video overflow-hidden rounded-md">
                 <Image 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/images/unsp_farm.jpeg" 
                   alt="Our Projects" 
-                  objectFit='cover'
-                  className="w-full h-full"
+                  fill
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
               Ready to <span className="font-medium">Begin?</span>
             </h2>
             <p className="text-gray-600 mb-8">
-              Share your vision and we'll craft the perfect solution.
+              Share your vision and we&#39;ll craft the perfect solution.
             </p>
 
             <form className="space-y-6" action={handleSubmit}>

@@ -15,37 +15,14 @@ export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(true)
 
   const handleVideoEnd = () => {
-    const nextIndex = (currentIndex + 1) % videos.length
-    setCurrentIndex(nextIndex)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length)
     setProgress(0)
   }
-
-  useEffect(() => {
-  const interval = setInterval(() => {
-    const video = videoRef.current
-    if (video?.duration) {
-      const currentTime = video.currentTime
-      const duration = video.duration || 1
-      if (isPlaying) {
-        setProgress((currentTime / duration) * 100)
-      }
-    }
-  }, 100)
-
-  return () => clearInterval(interval)
-}, [isPlaying, videoRef])
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (video) {
-      video.load()
-      if (isPlaying) video.play()
-    }
-  }, [currentIndex])
 
   const togglePlayPause = () => {
     const video = videoRef.current
     if (!video) return
+
     if (video.paused) {
       video.play()
       setIsPlaying(true)
@@ -54,6 +31,27 @@ export default function HeroSection() {
       setIsPlaying(false)
     }
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const video = videoRef.current
+      if (video?.duration && isPlaying) {
+        const currentTime = video.currentTime
+        const duration = video.duration
+        setProgress((currentTime / duration) * 100)
+      }
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [isPlaying])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (video) {
+      video.load()
+      if (isPlaying) video.play()
+    }
+  }, [currentIndex, isPlaying])
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
