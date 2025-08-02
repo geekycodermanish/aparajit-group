@@ -16,7 +16,9 @@ export default function Home() {
       <AboutSection />
       <OurValues />
       <ProjectsSection />
+      <FeaturedProjectsSection />
       <DirectorSection />
+      <ContactSection />
     </main>
   );
 }
