@@ -8,8 +8,8 @@ const projects = [
   {
     id: 'Vedant City',
     title: 'Vedant City',
-    location: 'Jhajjar,Haryana',
-    description: 'A real estate projects by Aparajit group,Offering both residential and industrial plots near Relience MET City',
+    location: 'Jhajjar, Haryana',
+    description: 'A real estate project by Aparajit group, Offering both residential and industrial plots near Reliance MET City',
     image: '/images/projects/project_3.jpg',
     features: ['RCC roads', 'Sewage treatment', 'Solar lights']
   },
@@ -17,15 +17,15 @@ const projects = [
     id: 'ROB (Railway over bridge).',
     title: 'ROB (Railway over bridge).',
     location: 'Bankhadi ,Madhya pradesh',
-    description: 'A railway over bridge project located in Bankhadi, Madhya Pradesh.',
+    description: 'A Railway Over Bridge project located in Bankhadi, Madhya Pradesh.',
     image: '/images/projects/project_2.jpg',
-    features: ['Modern Infrastructure', 'Deck slab', 'Load consideration']
+    features: ['Modern Infrastructure', 'Deck slab', 'Load Consideration']
   },
   {
     id: 'Road construction',
     title: 'Road construction',
     location: 'Arunachal pradesh',
-    description: 'A road cunstruction project in Arunachal pradesh',
+    description: 'A road construction project in Arunachal Pradesh',
     image: '/images/projects/project_4.jpg',
     features: ['Modern Equipment', 'Safety Measures', 'Advanced Surveying & Planning']
   },

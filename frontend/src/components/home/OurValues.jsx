@@ -7,7 +7,7 @@ const OurValues = () => {
   const stats = [
     { value: "Farmhouses", label: "Upcoming projects" },
     { value: "Highway and Road", label: "Delivered in Infra " },
-    { value: "Vedant city", label: "In real estate" }
+    { value: "Vedant city", label: "In Real Estate" }
   ];
 
   const marqueeVariants = {

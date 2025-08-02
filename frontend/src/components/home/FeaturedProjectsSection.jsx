@@ -10,7 +10,7 @@ const projects = [
     name: 'The Aanandam Farm (Naugaun, Rajasthan)',
     video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
-      'Nestled against the majestic Aravalli Hills, The Aanandam Farm is a sanctuary of rustic luxury. Each estate features a private swimming pool, sustainable architecture, and modern amenities, including solar-powered street lights, a clubhouse, and a bespoke living experience where nature and sophistication coexist.',
+      'Nestled in the majestic Aravalli Hills, The Aanandam Farm is a sanctuary of rustic luxury. Each estate features a private swimming pool, sustainable architecture and modern amenities, including solar-powered street lights, a clubhouse and a bespoke living experience where nature and sophistication coexist.',
   },
   // {
   //   id: 2,

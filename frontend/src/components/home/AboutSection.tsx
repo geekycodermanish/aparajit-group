@@ -15,7 +15,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="text-[2.8rem] leading-[1.1] md:text-[3.5rem] lg:text-[4rem] font-black tracking-[-0.03em]"
           >
-            <span className="block">Recreating Infra </span>
+            <span className="block">Recreating Infra</span>
             <span className="block">& Real Estate</span>
             <span className="block">Sector at The</span>
             <span className="block">Same Time</span>
@@ -31,13 +31,12 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
-              APARAJIT GROUP is a group of companies founded by Honerable managing Director ,Sh Anand Singh having over 25 years of rich experience in Residential ,industrial &
-              commercial projects,over 100 Builder floor and many city mall developed in diffrent cities over india.
+              APARAJIT GROUP is a group of companies founded by Honourable managing Director, Sh Anand Singh having over 25 years of rich experience in Residential, Industrial & Commercial projects, over 100 Builder floor and many city mall developed in diffrent cities over india.
             </p>
             
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
               Projects like <span className="font-medium">UNIMARK HEALTHCARE LTD. (HARIDWAR)</span> and {' '}
-              <span className="font-medium">KOTA SUPAR THERMAL</span> As well.
+              <span className="font-medium">KOTA SUPER THERMAL</span> As well.
             </p>
             
             <p className="text-xl md:text-2xl lg:text-[1.7rem] leading-tight tracking-tight font-medium italic">

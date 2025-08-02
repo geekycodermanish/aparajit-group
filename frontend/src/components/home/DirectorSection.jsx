@@ -132,7 +132,7 @@ export default function LeadershipSection() {
                 variants={quoteVariants}
               >“</motion.span>
               <blockquote className="relative z-10 text-xl md:text-2xl font-light text-gray-700 italic leading-relaxed pl-4 border-l-4 border-amber-400"> {/* Added left border */}
-                We don't just build structures; we sculpt landmarks that define skylines and inspire generations.
+                We don't just build structures, we sculpt landmarks that define skylines and inspire generations.
               </blockquote>
             </motion.div>
 
