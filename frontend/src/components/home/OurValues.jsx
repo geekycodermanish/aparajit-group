@@ -40,7 +40,7 @@ const OurValues = () => {
           <div className="left-section w-full lg:w-1/2 flex justify-center items-center relative z-10">
             <div className="relative w-full h-auto rounded-2xl overflow-hidden shadow-lg">
               <img 
-                src="/images/pic_5.jpg" 
+                src="/images/pic_2.jpg" 
                 alt="People watching TV outdoors" 
                 className="w-full h-full object-cover rounded-2xl" 
               />

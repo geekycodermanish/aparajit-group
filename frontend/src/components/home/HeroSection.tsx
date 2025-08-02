@@ -86,7 +86,7 @@ export default function HeroSection() {
           <div className="h-px w-24 bg-amber-500 my-4" />
           <p className="text-sm sm:text-base font-sans font-light leading-relaxed text-white/90">
             At <span className="font-semibold text-amber-400">APARAJIT GROUP</span>, we are committed to transforming visions into reality through high-quality construction. 
-            From Highways , Road to Industrial and Residential township ,Farmhouses and industrial park  with large-scale real estate and infrastructure projects, 
+            From Highways , Road to Industrial and Residential township,Farmhouses and industrial park  with large-scale real estate and infrastructure projects, 
             we build with purpose, precision, and long-lasting impact. 
             Our foundation is built on trust, technology, and timely execution.
           </p>

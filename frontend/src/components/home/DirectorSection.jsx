@@ -82,7 +82,7 @@ export default function LeadershipSection() {
             <div className="absolute -top-4 -left-4 w-full h-full rounded-lg border-2 border-amber-300/60 z-0" />
             <div className="relative z-10 h-[450px] lg:h-[580px] w-full rounded-lg overflow-hidden shadow-xl"> {/* Slightly less aggressive shadow */}
               <Image
-                src="/images/virat_image.jpg" // Ensure this image exists
+                // src="/images/virat_image.jpg" // Ensure this image exists
                 alt="Anand Singh - Director, Aparajit Group"
                 fill
                 className="object-cover object-center"

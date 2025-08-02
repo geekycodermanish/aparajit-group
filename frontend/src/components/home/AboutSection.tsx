@@ -31,8 +31,8 @@ const AboutSection = () => {
             className="space-y-8"
           >
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
-              APARAJIT GROUP is a group of companies founded by Honerable managing Director ,Sh Anand Singh having over 25 years of rich experience in Residential ,industrial &
-              commercial projects,over 100 Builder floor and many city mall developed in diffrent cities over india.
+              APARAJIT GROUP is a renowned conglomerate of companies founded by the Honorable Managing Director, Shri Anand Singh, who brings over 25 years of extensive experience in residential, industrial, and commercial projects.
+              Under his visionary leadership, the group has successfully developed numerous city malls across various cities in India, establishing a strong footprint in the real estate sector.
             </p>
             
             <p className="text-lg md:text-xl lg:text-[1.35rem] leading-relaxed tracking-tight font-light">
