@@ -154,7 +154,7 @@ export default function LeadershipSection() {
                   variants={lineVariants}
                 />
                 <p className="font-serif text-xl text-gray-900">Anand Singh</p>
-                <p className="text-xs uppercase tracking-widest text-gray-500 mt-1">Director, Aparajit Group</p>
+                <p className="text-xs uppercase tracking-widest text-gray-500 mt-1">Managing Director, Aparajit Group</p>
             </motion.div>
           </motion.div>
         </div>

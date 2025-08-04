@@ -7,10 +7,10 @@ import { useState } from 'react';
 const projects = [
   {
     id: 1, 
-    name: 'Aanandam Farm (Naugaun)',
+    name: 'Anandam Farm (Naugaun)',
     video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
-      'Nestled against the majestic Aravalli Hills, The Aanandam Farm is a sanctuary of rustic luxury. Each estate features a private swimming pool, sustainable architecture, and modern amenities, including solar-powered street lights, a clubhouse, and a bespoke living experience where nature and sophistication coexist.',
+      'Nestled in the majestic Aravalli Hills, The Anandam Farm is a sanctuary of rustic luxury. Each estate features a  swimming pool, sustainable architecture and modern amenities, including solar-powered street lights, a clubhouse ,wellness, Resort, gated entry and a bespoke living experience where nature and sophistication co-exist.'
   },
   // {
   //   id: 2,
