@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
               <span className="text-xs tracking-[0.3em] text-amber-500 mt-6">GROUP</span>
               <p className="text-gray-400 leading-relaxed text-sm mt-8 max-w-md">
-                Redefining Real estate and Infra through exceptional craftsmanship and unparalleled service since 2005.
+                Redefining Real estate and Infra through exceptional craftsmanship and unparalleled service since 2000.
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-400 text-sm font-light">APARAJIT GROUP,3318, SECTOR -23, PALAM VIHAR CARTERPURI ROAD,<br/>GURUGRAM-122017</span>
+                <span className="text-gray-400 text-sm font-light">APARAJIT GROUP<br/>3318, SECTOR -23, PALAM VIHAR CARTERPURI ROAD,<br/>GURUGRAM-122017</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

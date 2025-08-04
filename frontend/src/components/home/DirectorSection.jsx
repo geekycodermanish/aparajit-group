@@ -139,7 +139,7 @@ export default function LeadershipSection() {
             {/* Director's Profile */}
             <motion.div className="space-y-5 text-gray-600 leading-relaxed max-w-xl" variants={itemVariants}>
               <p>
-                Under the visionary leadership of <span className="font-semibold text-amber-600">Anand Singh  </span>, Aparajit Group has ascended to the pinnacle of luxury construction in India. His philosophy marries two decades of profound expertise with a relentless pursuit of perfection, establishing a new benchmark for quality.
+                Under the visionary leadership of <span className="font-semibold text-amber-600">Anand Singh  </span>, Aparajit Group has ascended to the pinnacle of luxury construction in India. His philosophy carries over the last two decades of profound expertise with a relentless pursuit of perfection, establishing a new benchmark for quality.
               </p>
               <p>
                 Mr. Singh's principle of "ethical luxury" is the cornerstone of our identity, ensuring every creation is a testament to sustainable innovation and enduring value for our discerning clientele.
