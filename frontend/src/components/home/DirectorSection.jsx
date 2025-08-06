@@ -10,18 +10,18 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, // Slightly faster staggering for a livelier feel
+      staggerChildren: 0.15,
       delayChildren: 0.2,
     },
   },
 }
 
 const itemVariants = {
-  hidden: { y: 30, opacity: 0 }, // Increased y for more noticeable slide-up
+  hidden: { y: 30, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { type: 'spring', stiffness: 120, damping: 14, mass: 0.8 }, // Adjusted for a smoother, bouncier feel
+    transition: { type: 'spring', stiffness: 120, damping: 14, mass: 0.8 },
   },
 }
 
@@ -33,7 +33,6 @@ const lineVariants = {
   },
 }
 
-// New variant for the image to have a subtle scale and rotate effect
 const imageVariants = {
   hidden: { opacity: 0, scale: 0.95, rotate: -3 },
   visible: {
@@ -44,16 +43,14 @@ const imageVariants = {
   },
 }
 
-// New variant for the quote marks
 const quoteVariants = {
   hidden: { opacity: 0, scale: 0.5 },
   visible: {
-    opacity: 0.2, // Slightly more visible on white background
+    opacity: 0.2,
     scale: 1,
     transition: { type: 'spring', stiffness: 150, damping: 10, delay: 0.5 },
   },
 }
-
 
 export default function LeadershipSection() {
   const ref = useRef(null)
@@ -63,53 +60,48 @@ export default function LeadershipSection() {
   const headingWords = headingText.split(" ")
 
   return (
-    // Changed background to white, text to darker tones
     <section ref={ref} className="relative bg-white text-gray-800 overflow-hidden">
       {/* Accent line at the top */}
       <div className="absolute top-0 left-0 w-full h-0.5 bg-amber-600" />
       
-      <div className="container mx-auto px-6 py-20 lg:py-13">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24">
+      <div className="container mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-24">
           
           {/* ====== IMAGE COLUMN ====== */}
           <motion.div 
-            className="lg:w-5/12 w-full relative"
+            className="w-full lg:w-5/12 relative"
             variants={imageVariants} 
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            {/* Subtle border effect around the image */}
-            <div className="absolute -top-4 -left-4 w-full h-full rounded-lg border-2 border-amber-300/60 z-0" />
-            <div className="relative z-10 h-[450px] lg:h-[580px] w-full rounded-lg overflow-hidden shadow-xl"> {/* Slightly less aggressive shadow */}
+            <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-full h-full rounded-lg border-2 border-amber-300/60 z-0" />
+            <div className="relative z-10 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[580px] w-full rounded-lg overflow-hidden shadow-lg">
               <Image
-                // src="/images/virat_image.jpg" // Ensure this image exists
-                alt="Anand Singh - Director, Aparajit Group"
+                // src="/images/virat_image.jpg"
+                // alt="Anand Singh - Director, Aparajit Group"
                 fill
                 className="object-cover object-center"
                 quality={100}
                 priority
               />
-              {/* Overlay for subtle color tint, adjusted for white background */}
               <div className="absolute inset-0 bg-amber-900/10 mix-blend-multiply" /> 
             </div>
           </motion.div>
 
           {/* ====== CONTENT COLUMN ====== */}
-          {/* This parent motion.div orchestrates the staggered animation for its children */}
           <motion.div 
-            className="lg:w-6/12 w-full"
+            className="w-full lg:w-6/12"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
             {/* Section Header */}
-            <div className="mb-12">
-              {/* ANIMATED HEADING: Each word animates in */}
-              <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900 leading-tight mb-4 overflow-hidden">
+            <div className="mb-8 md:mb-12">
+              <motion.h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900 leading-tight mb-3 sm:mb-4 overflow-hidden">
                 {headingWords.map((word, index) => (
                   <motion.span
                     key={index}
-                    className="inline-block mr-3" // Adjusted spacing for words
+                    className="inline-block mr-2 sm:mr-3"
                     variants={itemVariants}
                   >
                     {word === "Excellence" ? <span className="text-amber-600">{word}</span> : word}
@@ -117,7 +109,7 @@ export default function LeadershipSection() {
                 ))}
               </motion.h2>
               <motion.p 
-                className="text-sm uppercase tracking-widest text-amber-600"
+                className="text-xs sm:text-sm uppercase tracking-widest text-amber-600"
                 variants={itemVariants}
               >
                 Helmed by Anand Singh
@@ -125,35 +117,33 @@ export default function LeadershipSection() {
             </div>
 
             {/* STYLIZED BLOCKQUOTE */}
-            <motion.div className="relative mb-10" variants={itemVariants}>
-              {/* Animated large quote mark */}
+            <motion.div className="relative mb-8 md:mb-10" variants={itemVariants}>
               <motion.span 
-                className="absolute -top-8 -left-4 text-9xl font-serif text-gray-300 z-0"
+                className="absolute -top-6 sm:-top-8 -left-3 sm:-left-4 text-7xl sm:text-8xl md:text-9xl font-serif text-gray-300 z-0"
                 variants={quoteVariants}
               >“</motion.span>
-              <blockquote className="relative z-10 text-xl md:text-2xl font-light text-gray-700 italic leading-relaxed pl-4 border-l-4 border-amber-400"> {/* Added left border */}
+              <blockquote className="relative z-10 text-lg sm:text-xl md:text-2xl font-light text-gray-700 italic leading-relaxed pl-3 sm:pl-4 border-l-2 sm:border-l-4 border-amber-400">
                 We don't just build structures, we sculpt landmarks that define skylines and inspire generations.
               </blockquote>
             </motion.div>
 
             {/* Director's Profile */}
-            <motion.div className="space-y-5 text-gray-600 leading-relaxed max-w-xl" variants={itemVariants}>
-              <p>
-                Under the visionary leadership of <span className="font-semibold text-amber-600">Anand Singh  </span>, Aparajit Group has ascended to the pinnacle of luxury construction in India. His philosophy carries over the last two decades of profound expertise with a relentless pursuit of perfection, establishing a new benchmark for quality.
+            <motion.div className="space-y-4 sm:space-y-5 text-gray-600 leading-relaxed max-w-xl" variants={itemVariants}>
+              <p className="text-sm sm:text-base">
+                Under the visionary leadership of <span className="font-semibold text-amber-600">Anand Singh</span>, Aparajit Group has ascended to the pinnacle of luxury construction in India. His philosophy marries two decades of profound expertise with a relentless pursuit of perfection, establishing a new benchmark for quality.
               </p>
-              <p>
+              <p className="text-sm sm:text-base">
                 Mr. Singh's principle of "ethical luxury" is the cornerstone of our identity, ensuring every creation is a testament to sustainable innovation and enduring value for our discerning clientele.
               </p>
             </motion.div>
 
             {/* Separator and Title Block */}
-            <motion.div className="mt-12 pt-8" variants={itemVariants}>
-                {/* ANIMATED DIVIDER LINE */}
+            <motion.div className="mt-8 sm:mt-12 pt-6 sm:pt-8" variants={itemVariants}>
                 <motion.div 
-                  className="h-px w-full bg-gray-300 mb-8 origin-left" 
+                  className="h-px w-full bg-gray-300 mb-6 sm:mb-8 origin-left" 
                   variants={lineVariants}
                 />
-                <p className="font-serif text-xl text-gray-900">Anand Singh</p>
+                <p className="font-serif text-lg sm:text-xl text-gray-900">Anand Singh</p>
                 <p className="text-xs uppercase tracking-widest text-gray-500 mt-1">Managing Director, Aparajit Group</p>
             </motion.div>
           </motion.div>

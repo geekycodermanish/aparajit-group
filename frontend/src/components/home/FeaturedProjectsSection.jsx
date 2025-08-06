@@ -7,25 +7,11 @@ import { useState } from 'react';
 const projects = [
   {
     id: 1, 
-    name: 'The Anandam Farm (Naugaun, Rajasthan)',
+    name: 'The The Anandam Farm (Naugaun,Rajasthan)',
     video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
     'Nestled in the majestic Aravalli Hills, The Anandam Farm is a sanctuary of rustic luxury. Each estate features a  swimming pool, sustainable architecture and modern amenities, including solar-powered street lights, a clubhouse ,wellness, Resort, gated entry and a bespoke living experience where nature and sophistication co-exist.'
-  },
-  // {
-  //   id: 2,
-  //   name: 'Veridian Farms',
-  //   video: '/videos/farmhouse2.mp4', // Replace with your actual video path
-  //   description:
-  //     "Escape the city's hustle to Veridian Farms, a community dedicated to a farm-to-table lifestyle. Wander through sprawling green meadows, enjoy organic produce from your own backyard, and live in homes that blend rustic charm with contemporary comfort.",
-  // },
-  // {
-  //   id: 3,
-  //   name: 'Serenity Acres',
-  //   video: '/videos/farmhouse3.mp4', // Replace with your actual video path
-  //   description:
-  //     'Discover your personal haven at Serenity Acres. Designed for tranquility and holistic wellness, these farmhouses offer private yoga decks, infinity pools, and uninterrupted views of the natural landscape. It is more than a home; it is a retreat for the soul.',
-  // },
+  }
 ];
 
 export default function HeroOverlaySection() {

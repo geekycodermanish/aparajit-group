@@ -77,27 +77,26 @@ export default function HeroSection() {
       </div>
 
       {/* Content - Bottom Left */}
-      <div className="relative z-10 h-full flex flex-col justify-end pb-16 pl-12 text-white">
-        <div className="max-w-2xl space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-serif font-bold tracking-tight leading-tight">
+      <div className="relative z-10 h-full flex flex-col justify-end pb-8 md:pb-16 px-4 sm:px-6 md:pl-12 text-white">
+        <div className="max-w-2xl space-y-2 sm:space-y-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight leading-tight">
             Building An Era 
           </h1>
-          <div className="h-px w-24 bg-amber-500 my-4" />
-          <p className="text-sm sm:text-base font-sans font-light leading-relaxed text-white/90">
+          <div className="h-px w-16 sm:w-24 bg-amber-500 my-2 sm:my-4" />
+          <p className="text-xs sm:text-sm md:text-base font-sans font-light leading-relaxed text-white/90">
             At <span className="font-semibold text-amber-400">APARAJIT GROUP</span>, we are committed to transform visions into reality through high-quality construction. Such as constructing  Highways, Roads, Industrial and Residential township,
              Developing Farmhouses and industrial park with large-scale real estate and infrastructure projects.  We build  precision, and long-lasting impression and growth .
-
           </p>
         </div>
       </div>
 
-      {/* Play/Pause Button */}
+      {/* Play/Pause Button - Adjusted for mobile */}
       <button
-        className="absolute bottom-16 right-8 z-10 p-2 text-white hover:text-amber-400 transition-colors"
+        className="absolute bottom-8 md:bottom-16 right-4 md:right-8 z-10 p-2 text-white hover:text-amber-400 transition-colors"
         onClick={togglePlayPause}
         aria-label="Toggle play/pause"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {isPlaying ? (
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 9v6m4-6v6" />
           ) : (
@@ -106,8 +105,8 @@ export default function HeroSection() {
         </svg>
       </button>
 
-      {/* Progress Bar */}
-      <div className="absolute bottom-6 right-8 z-10 w-32 h-1 bg-white/30 rounded overflow-hidden">
+      {/* Progress Bar - Adjusted for mobile */}
+      <div className="absolute bottom-4 md:bottom-6 right-4 md:right-8 z-10 w-24 md:w-32 h-1 bg-white/30 rounded overflow-hidden">
         <div
           className="h-full bg-amber-400 transition-all duration-200"
           style={{ width: `${progress}%` }}

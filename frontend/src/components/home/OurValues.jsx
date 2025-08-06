@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const OurValues = () => {
   const stats = [
     { value: "Farmhouses", label: "Upcoming projects" },
-    { value: "Highway and Road", label: "Delivered in Infra " },
+    { value: "Highway and Road", label: "Delivered in Infra" },
     { value: "Vedant city", label: "In Real Estate" }
   ];
 
