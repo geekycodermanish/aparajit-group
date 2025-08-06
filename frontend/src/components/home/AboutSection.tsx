@@ -36,7 +36,7 @@ const AboutSection = () => {
             </p>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-[1.35rem] leading-relaxed sm:leading-relaxed tracking-tight font-light">
-              Projects like <span className="font-medium">UNIMARK HEALTHCARE LTD. (HARIDWAR)</span> and {' '}
+             Successfully delivered Projects like <span className="font-medium">UNIMARK HEALTHCARE LTD. (HARIDWAR)</span> and {' '}
               <span className="font-medium">KOTA SUPER THERMAL</span> As well.
             </p>
           </motion.div>

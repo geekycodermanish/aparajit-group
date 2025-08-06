@@ -119,10 +119,10 @@ export default function ContactSection() {
                 onBlur={(e) => {if(e.target.value === "+91" || e.target.value === "+") e.target.value = ""}}
               />
               <input
-                name="email"
-                type="email"
+                name="E-mail"
+                type="E-mail"
                 className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
-                placeholder="Enter your email"
+                placeholder="Enter your E-mail"
                 required
                 disabled={isPending}
               />
@@ -135,7 +135,7 @@ export default function ContactSection() {
                 <option value="">Contact Type</option>
                 <option value="Residential Inquiry">Residential Inquiry</option>
                 <option value="Commercial Inquiry">Commercial Inquiry</option>
-                <option value="Investment Opportunity">Investment Opportunity</option>
+                <option value="Investment Opportunity">Farmhouse Inquiry</option>
                 <option value="General Question">General Question</option>
               </select>
 

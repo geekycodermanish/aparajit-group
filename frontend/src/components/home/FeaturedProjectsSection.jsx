@@ -6,8 +6,8 @@ import { useState } from 'react';
 // New farmhouse project data
 const projects = [
   {
-    id: 1, 
-    name: 'The Anandam Farm (Naugaun,Rajasthan)',
+    id: 1,
+    name: 'The Anandam Farm (Naugaon,Rajasthan)',
     video: '/images/upcodeing_project.mp4', // Replace with your actual video path
     description:
     'Nestled in the majestic Aravalli Hills, The Anandam Farm is a sanctuary of rustic luxury. Each estate features a  swimming pool, sustainable architecture and modern amenities, including solar-powered street lights, a clubhouse ,wellness, Resort, gated entry and a bespoke living experience where nature and sophistication co-exist.'
@@ -87,7 +87,7 @@ export default function HeroOverlaySection() {
           transition={{ delay: 0.2, ...textVariants.visible.transition }}
           className="text-xs mt-6 opacity-80"
         >
-        (Naugaun)
+        (Naugaon)
         </motion.p>
       </div>
 
