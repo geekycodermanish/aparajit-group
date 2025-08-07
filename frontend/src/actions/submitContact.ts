@@ -41,6 +41,8 @@ export async function submitContact(formData: FormData): Promise<SubmitResult> {
   const phone = formData.get('phone') as string;
   const mes = formData.get('mes') as string;
 
+  console.log('Form Data:', { name, ctype, email, phone, mes });
+
   /* basic validation */
   if (!name || !email || !phone || !ctype) {
     return { success: false, message: 'Required fields missing' };

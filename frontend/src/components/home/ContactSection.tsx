@@ -119,10 +119,10 @@ export default function ContactSection() {
                 onBlur={(e) => {if(e.target.value === "+91" || e.target.value === "+") e.target.value = ""}}
               />
               <input
-                name="E-mail"
-                type="E-mail"
+                name="email"
+                type="email"
                 className="w-full px-4 py-3 border-b border-gray-200 focus:border-amber-500 outline-none placeholder-gray-200 text-gray-800"
-                placeholder="Enter your E-mail"
+                placeholder="Enter your email"
                 required
                 disabled={isPending}
               />
