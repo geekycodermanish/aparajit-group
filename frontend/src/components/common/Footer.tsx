@@ -24,10 +24,10 @@ export default function Footer() {
           <div>
             <h3 className="text-xs font-medium tracking-[0.3em] uppercase mb-8 text-white">EXPLORE</h3>
             <ul className="space-y-4">
-              <li><Link href="/properties" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Delivered Projects</Link></li>
-              <li><Link href="/developments" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">New Developments</Link></li>
-              <li><Link href="/architecture" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Signature Architecture</Link></li>
-              <li><Link href="/interiors" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Interior Design</Link></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Delivered Projects</a></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">New Developments</a></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Signature Architecture</a></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Interior Design</a></li>
             </ul>
           </div>
 
@@ -35,10 +35,10 @@ export default function Footer() {
           <div>
             <h3 className="text-xs font-medium tracking-[0.3em] uppercase mb-8 text-white">SERVICES</h3>
             <ul className="space-y-4">
-              <li><Link href="/concierge" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Commercial & Industrail Civil Work Construction</Link></li>
-              <li><Link href="/investment" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Residential Civil Work Construction </Link></li>
-              <li><Link href="/management" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">High rise building Construction </Link></li>
-              <li><Link href="/relocation" className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Interior work & Development </Link></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Commercial & Industrail Civil Work Construction</a></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Residential Civil Work Construction </a></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">High rise building Construction </a></li>
+              <li><a className="text-gray-400 hover:text-amber-500 transition-colors text-sm font-light">Interior work & Development </a></li>
             </ul>
           </div>
 
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Section - Newsletter */}
-        <div className="border-t border-gray-800 pt-12 mb-16">
+        {/* <div className="border-t border-gray-800 pt-12 mb-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div className="mb-8 md:mb-0 md:w-1/2">
               <h3 className="text-sm font-medium tracking-[0.3em] uppercase mb-4 text-white">PRIVATE COLLECTION</h3>
@@ -93,7 +93,7 @@ export default function Footer() {
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
@@ -117,15 +117,15 @@ export default function Footer() {
             </div>
             <div className="hidden md:block h-4 w-px bg-gray-700"></div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-gray-500 hover:text-amber-500 transition-colors text-xs tracking-wider">
+              <a className="text-gray-500 hover:text-amber-500 transition-colors text-xs tracking-wider">
                 Privacy
-              </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-amber-500 transition-colors text-xs tracking-wider">
+              </a>
+              <a className="text-gray-500 hover:text-amber-500 transition-colors text-xs tracking-wider">
                 Terms
-              </Link>
-              <Link href="/disclosures" className="text-gray-500 hover:text-amber-500 transition-colors text-xs tracking-wider">
+              </a>
+              <a className="text-gray-500 hover:text-amber-500 transition-colors text-xs tracking-wider">
                 Disclosures
-              </Link>
+              </a>
             </div>
           </div>
         </div>

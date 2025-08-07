@@ -33,7 +33,7 @@ const OurValues = () => {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="min-h-screen flex justify-center items-center p-5 md:p-10 bg-white text-black overflow-y-auto">
+      <div className="min-h-screen flex justify-center items-center pt-5 md:pt-10 pb-0 bg-white text-black overflow-y-auto">
         <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-10 relative overflow-hidden">
           
           {/* Left Section: Large Image with static text */}

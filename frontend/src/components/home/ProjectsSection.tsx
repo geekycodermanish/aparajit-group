@@ -51,7 +51,7 @@ export default function HorizontalProjectSlider() {
             className="max-w-4xl mx-auto"
           >
             <div className="relative text-center">
-              <span className="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-800 font-serif text-xl md:text-2xl tracking-widest uppercase">
+              <span className="inline-block px-6 py-3 border border-gray-300 rounded-full text-gray-800 font-serif text-base md:text-lg tracking-widest uppercase">
                 — Our Projects —
               </span>
               <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 h-px bg-gray-200 -z-10" />
@@ -69,7 +69,7 @@ export default function HorizontalProjectSlider() {
             {projects.map((project, index) => (
               <div 
                 key={project.id} 
-                className="relative h-[80vh] w-[90vw] md:w-[70vw] flex-shrink-0 mx-4 md:mx-8 rounded-2xl overflow-hidden group"
+                className="relative h-[80vh] w-[90vw] md:w-[70vw] flex-shrink-0 mx-4 md:mx-8 overflow-hidden group"
               >
                 {/* project page not ready */}
                 {/* <Link href={`/projects/${project.id}`} className="absolute inset-0 z-20" aria-label={`View ${project.title}`} /> */}
@@ -109,11 +109,6 @@ export default function HorizontalProjectSlider() {
                       </div>
                     </motion.div>
                   </div>
-                </div>
-
-                {/* Project Number */}
-                <div className="absolute top-8 right-8 z-10 text-white/20 text-7xl font-bold">
-                  {String(index + 1).padStart(2, '0')}
                 </div>
               </div>
             ))}
