@@ -77,8 +77,8 @@ export default function LeadershipSection() {
             <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-full h-full rounded-lg border-2 border-amber-300/60 z-0" />
             <div className="relative z-10 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[580px] w-full rounded-lg overflow-hidden shadow-lg">
               <Image
-                // src="/images/virat_image.jpg"
-                // alt="Anand Singh - Director, Aparajit Group"
+                 src="/images/virat_image.jpg"
+                 alt="Anand Singh - Director, Aparajit Group"
                 fill
                 className="object-cover object-center"
                 quality={100}

@@ -52,7 +52,7 @@ export default function ContactSection() {
                 {
                   icon: <FiCheckCircle className="text-amber-500" size={24} />,
                   title: "End-to-End Service",
-                  desc: "Even after purchase we have team for maintanance and facilitate, Re-sale."
+                  desc: "we have team for maintanance and facilitate, Re-sale."
                 }
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 group">
