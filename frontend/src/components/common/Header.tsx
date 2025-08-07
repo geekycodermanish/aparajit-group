@@ -74,9 +74,9 @@ const handleNavClick = (path: string) => {
 
       {/* Main Navbar */}
       <div className="max-w-8xl mx-auto px-6">
-        <div className="flex justify-between items-center py-3">
+        <div className="flex justify-between items-center h-19">
           {/* LOGO */}
-          <Link href="/" className="flex items-center h-10 w-auto ml-[5%]">
+          <Link href="/" className="flex items-center h-9 w-auto ml-[5%]">
             <Image
               src="/images/LOGO.png"
               alt="Aparajit Group"
