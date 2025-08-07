@@ -31,7 +31,7 @@ const AboutSection = () => {
             className="space-y-6 sm:space-y-8"
           >
             <p className="text-base sm:text-lg md:text-xl lg:text-[1.35rem] leading-relaxed sm:leading-relaxed tracking-tight font-light">
-              APARAJIT GROUP is a group of companies founded by Hon'ble Managing Director - Mr. Anand Singh having over 25 years of Extensive expertise in Residential,
+              APARAJIT GROUP is a group of companies founded by Hon&apos;ble Managing Director - Mr. Anand Singh having over 25 years of Extensive expertise in Residential,
                Industrial & Commercial infra projects.
             </p>
             
