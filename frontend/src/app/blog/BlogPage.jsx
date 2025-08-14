@@ -2,16 +2,16 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
+import { Blog1, Blog2, Blog3, Blog4, Blog5 } from './AllBlogs';
 
 export default function BlogPage() {
   const blogPosts = [
     {
       id: 1,
-      title: "Innovative Construction Techniques for 2025",
+      title: "Construction Technology Trends & Market Outlook 2024",
       excerpt: "Exploring cutting-edge building methods that are revolutionizing the construction industry.",
-      content: `Full content for Innovative Construction Techniques for 2025.\n\nIn this blog, we dive deep into modern engineering advancements, robotics in construction, 3D printing of buildings, and how AI is helping optimize project timelines.`,
+      content: <Blog1 />,
       date: "June 15, 2025",
       category: "Technology",
       readTime: "5 min read",
@@ -19,9 +19,9 @@ export default function BlogPage() {
     },
     {
       id: 2,
-      title: "Sustainable Materials for Modern Construction",
+      title: "16 Sustainable & Cost-Effective Building Materials",
       excerpt: "How eco-friendly materials are changing the way we build for a greener future.",
-      content: `Full blog content on Sustainable Materials.\n\nFrom bamboo to recycled plastic composites, the modern world of eco-friendly construction has grown drastically in the last decade.`,
+      content: <Blog2 />,
       date: "May 28, 2025",
       category: "Sustainability",
       readTime: "4 min read",
@@ -29,9 +29,9 @@ export default function BlogPage() {
     },
     {
       id: 3,
-      title: "2025 Construction Industry Trends",
+      title: "Construction Industry Trends & Innovation in 2025",
       excerpt: "Key insights into what's driving demand and innovation in the building sector.",
-      content: `Here's what’s trending in 2025: modular buildings, digital twins, remote site monitoring, and sustainability goals integrated into every step of the process.`,
+      content: <Blog3 />,
       date: "April 12, 2025",
       category: "Trends",
       readTime: "6 min read",
@@ -39,9 +39,9 @@ export default function BlogPage() {
     },
     {
       id: 4,
-      title: "Designing for Durability: Structures That Last",
+      title: "How to Ensure a Long Lifespan for Your Building",
       excerpt: "Engineering principles for creating buildings that stand the test of time.",
-      content: `Discover engineering principles behind long-lasting structures, including load distribution, seismic resistance, waterproofing, and climate-optimized design.`,
+      content: <Blog4 />,
       date: "March 30, 2025",
       category: "Engineering",
       readTime: "7 min read",
@@ -49,9 +49,9 @@ export default function BlogPage() {
     },
     {
       id: 5,
-      title: "Safety Innovations on Construction Sites",
+      title: "Top Safety Innovations in Construction for 2025",
       excerpt: "The latest technologies keeping construction workers safe on the job.",
-      content: `Explore cutting-edge innovations like smart helmets, wearables, site sensors, and AI-based accident prediction tools that are transforming job site safety.`,
+      content: <Blog5 />,
       date: "February 18, 2025",
       category: "Safety",
       readTime: "8 min read",
@@ -221,9 +221,13 @@ export default function BlogPage() {
               height={400}
               className="rounded-lg mb-6"
             />
-            <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+            {/* <p className="text-gray-700 leading-relaxed whitespace-pre-line">
               {activePost.content}
-            </p>
+            </p> */}
+            <div className="leading-relaxed">
+              {activePost.content}
+            </div>
+
           </div>
         </div>
       )}
