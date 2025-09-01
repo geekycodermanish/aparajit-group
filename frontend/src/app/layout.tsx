@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Header from '@/components/common/Header'; // Import Header
 import Footer from '@/components/common/Footer'; // Import Footer
@@ -6,14 +5,6 @@ import '../styles/globals.css'; // Global styles
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Aparajit Group | Build Premium',
-  description: 'High Quality Premium Building and Development Solutions',
-  icons: {
-    icon: '/favicon.png'
-  },
-};
 
 export default function RootLayout({
   children,

@@ -1,6 +1,7 @@
-'use client';
-
+import { Metadata } from 'next';
 import BlogPagea from './BlogPage';
+
+
 
 export default function BlogPage() {
   return (
