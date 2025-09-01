@@ -9,24 +9,7 @@ export const metadata: Metadata = {
   },
   description:
     "Aparajit Group is a modern construction and engineering company delivering durable, technology-driven projects across commercial and infrastructure segments. We use BIM, drones, AI, modular methods, and sustainable materials to build faster, safer, and greener.",
-  keywords: [
-    "aparajit",
-    "Aparajit Group",
-    // "aparajit construction",
-    // "construction company",
-    // "modern construction",
-    // "BIM",
-    // "digital twins",
-    // "drones in construction",
-    // "AI in construction",
-    // "modular construction",
-    // "prefabrication",
-    // "sustainable building materials",
-    // "commercial construction",
-    // "tension fabric buildings",
-    // "building durability",
-    // "construction safety",
-  ],
+  keywords: ["aparajit", "Aparajit Group"],
   authors: [{ name: "Aparajit Group" }],
   creator: "Aparajit Group",
   publisher: "Aparajit Group",
@@ -69,21 +52,14 @@ export const metadata: Metadata = {
     description:
       "Modern, sustainable construction powered by BIM, drones, AI, and modular methods.",
     images: ["https://aparajitgroup.co.in/images/LOGO.png"],
-    creator: "@aparajit", // update if you have an official handle
+    creator: "@aparajit",
   },
   icons: {
-    icon: [
-      { url: "/images/LOGO.png" },
-    ],
+    icon: [{ url: "/images/LOGO.png" }],
   },
-  // Uncomment and fill when you verify the site:
-  // verification: {
-  //   google: "GOOGLE_SITE_VERIFICATION_TOKEN",
-  //   other: { "msvalidate.01": "BING_VERIFICATION_TOKEN" },
-  // },
 };
 
-export function HomeJsonLd() {
+export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -91,13 +67,8 @@ export function HomeJsonLd() {
     url: "https://aparajitgroup.co.in/",
     alternateName: ["Aparajit", "Aparajit Construction", "Aparajit Group"],
     logo: "https://aparajitgroup.co.in/images/LOGO.png",
-    sameAs: [
-      // add real profiles when available
-      // "https://www.linkedin.com/company/aparajitgroup",
-      // "https://twitter.com/aparajit",
-    ],
-    keywords:
-      "aparajit, Aparajit Group, construction company", //BIM, drones, AI, modular construction, sustainable materials, commercial construction, building durability, construction safety",
+    sameAs: [],
+    keywords: "aparajit, Aparajit Group, construction company",
     areaServed: "IN",
     brand: {
       "@type": "Brand",
@@ -113,8 +84,7 @@ export function HomeJsonLd() {
     inLanguage: "en-IN",
     potentialAction: {
       "@type": "SearchAction",
-      target:
-        "https://aparajitgroup.co.in/search?q={search_term_string}", // ensure a search page exists before keeping this
+      target: "https://aparajitgroup.co.in/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -123,21 +93,12 @@ export function HomeJsonLd() {
     <>
       <script
         type="application/ld+json"
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD script injection
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
       />
-    </>
-  );
-}
-
-export default function Home() {
-  return (
-    <>
-      <HomeJsonLd />
       <HomePage />
     </>
   );
