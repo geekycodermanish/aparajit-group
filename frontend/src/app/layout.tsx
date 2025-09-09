@@ -4,6 +4,7 @@ import Footer from '@/components/common/Footer'; // Import Footer
 import '../styles/globals.css'; // Global styles
 import Script from 'next/script';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
@@ -14,6 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         {/* Google Analytics Tag */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TWF0P8NEM6" strategy="afterInteractive"></Script>
         <Script id="ga-init" strategy="afterInteractive">
